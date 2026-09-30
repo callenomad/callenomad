@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#1E2229"/>
-  <circle cx="16" cy="16" r="11" stroke="#FCFBFA" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="1 2"/>
-  <polygon points="16,5 19.5,16 16,13.5" fill="#D94E36"/>
-  <polygon points="16,5 12.5,16 16,13.5" fill="#E86A55"/>
-  <polygon points="16,27 19.5,16 16,18.5" fill="#FCFBFA" fill-opacity="0.7"/>
-  <polygon points="16,27 12.5,16 16,18.5" fill="#FCFBFA" fill-opacity="0.4"/>
-  <circle cx="16" cy="16" r="2" fill="#1E2229" stroke="#D94E36" stroke-width="1.2"/>
+  <!-- CalleNomad Favicon: Variant 6B Bold Badge -->
+  <rect width="32" height="32" rx="7" fill="#1E2229"/>
+  <g transform="translate(1.5, 1.5) scale(0.29)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 68 34 A 28 28 0 1 0 68 70" fill="none" stroke="#FFFFFF" stroke-width="6.5" />
+    <line x1="31" y1="69" x2="43" y2="57" stroke="#FFFFFF" stroke-width="5.5" />
+    <circle cx="48" cy="52" r="6.5" fill="#1E2229" stroke="#FFFFFF" stroke-width="3.5" />
+    <circle cx="48" cy="52" r="3" fill="#D94E36" />
+    <line x1="53" y1="47" x2="68" y2="32" stroke="#D94E36" stroke-width="5.5" />
+    <polygon points="82,18 63,25 75,37" fill="#D94E36" stroke="none" />
+  </g>
 </svg>
