@@ -6,7 +6,20 @@
   <title>CalleNomad | Practical Spanish for Digital Nomads</title>
   <meta name="description" content="1-on-1 practical Spanish coaching for remote workers living and traveling in Latin America. Master cafe wifi, WhatsApp landlord negotiations, and real street conversations in 6 weeks.">
   <meta name="keywords" content="digital nomad spanish, learn spanish colombia, spanish for remote workers, barranquilla spanish, calle nomad, ben chiverton-hunt">
-  
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://callenomad.com">
+  <meta property="og:title" content="CalleNomad | Practical Spanish for Digital Nomads">
+  <meta property="og:description" content="1-on-1 street Spanish coaching for remote workers in Latin America. Master café Wi-Fi, WhatsApp landlord negotiations, and real conversations in 6 weeks.">
+  <meta property="og:image" content="https://callenomad.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CalleNomad | Practical Spanish for Digital Nomads">
+  <meta name="twitter:description" content="1-on-1 street Spanish coaching for remote workers in Latin America. Master café Wi-Fi, WhatsApp landlord negotiations, and real conversations in 6 weeks.">
+  <meta name="twitter:image" content="https://callenomad.com/og-image.jpg">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -85,10 +98,10 @@ body[data-theme="minimalist"] {
 }
 
 /* Dynamic Typography Combinations */
-body[data-font="outfit-inter"],
+body[data-font="outfit-jakarta"],
 body:not([data-font]) {
   --font-heading: 'Outfit', sans-serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body[data-font="jakarta-all"] {
@@ -96,8 +109,8 @@ body[data-font="jakarta-all"] {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-body[data-font="jakarta-inter"] {
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
+body[data-font="outfit-inter"] {
+  --font-heading: 'Outfit', sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -202,25 +215,27 @@ button {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
+  padding: 0 20px;
 }
 
 .header-inner {
-  height: 78px;
+  height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
 }
 
 .brand-logo {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.3rem;
+  font-size: 1.32rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   text-decoration: none;
   transition: opacity var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .brand-logo:hover {
@@ -228,20 +243,21 @@ button {
 }
 
 .brand-logo-mark {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .brand-logo:hover .brand-logo-mark {
-  transform: rotate(-10deg) scale(1.06);
+  transform: rotate(-8deg) scale(1.06);
 }
 
 .logo-name {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text-main);
+  letter-spacing: -0.02em;
 }
 
 .accent-text { color: var(--brand-coral); }
@@ -249,14 +265,15 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav-link:hover { color: var(--brand-coral); }
@@ -788,6 +805,29 @@ section { padding: 85px 0; }
 
 .btn-copy:hover { border-color: var(--border-medium); color: var(--text-main); }
 
+.phrase-audio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  background: var(--bg-section);
+  border: 1.5px solid var(--brand-green);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-green);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-listen:hover { background: var(--brand-green); color: #fff; }
+.btn-listen.playing { background: var(--brand-green); color: #fff; }
+
 .phrase-quote {
   font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   font-weight: 600;
@@ -1076,7 +1116,7 @@ section { padding: 85px 0; }
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
   .desktop-nav { display: none; }
   .mobile-menu-btn { display: flex; }
   .nav-cta { display: none; }
@@ -1218,19 +1258,13 @@ section { padding: 85px 0; }
   <header class="site-header">
     <div class="header-inner container">
       <a href="#" class="brand-logo" aria-label="CalleNomad Home">
-        <svg class="brand-logo-mark" viewBox="0 0 36 36" width="34" height="34" fill="none" aria-hidden="true">
-          <rect width="36" height="36" rx="10" fill="var(--brand-coral)" fill-opacity="0.10" />
-          <circle cx="18" cy="18" r="12" stroke="var(--text-main)" stroke-width="1.2" stroke-dasharray="1.5 2.5" stroke-opacity="0.25" />
-          <line x1="18" y1="3.5" x2="18" y2="5.5" stroke="var(--brand-coral)" stroke-width="1.8" stroke-linecap="round" />
-          <line x1="18" y1="30.5" x2="18" y2="32.5" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-          <line x1="3.5" y1="18" x2="5.5" y2="18" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-          <line x1="30.5" y1="18" x2="32.5" y2="18" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-          <path d="M7 27 C 12 24, 15 19, 18 18 C 21 17, 24 12, 29 9" stroke="var(--brand-green)" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.45" stroke-dasharray="1.5 2.5" />
-          <polygon points="18,7 21.5,18 18,15.5" fill="var(--brand-coral)" />
-          <polygon points="18,7 14.5,18 18,15.5" fill="var(--brand-coral-hover)" />
-          <polygon points="18,29 21.5,18 18,20.5" fill="var(--text-main)" />
-          <polygon points="18,29 14.5,18 18,20.5" fill="var(--text-secondary)" />
-          <circle cx="18" cy="18" r="2.25" fill="var(--bg-card)" stroke="var(--brand-coral)" stroke-width="1.5" />
+        <svg class="brand-logo-mark" viewBox="0 0 100 100" width="36" height="36" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 69 33 A 29 29 0 1 0 69 71" fill="none" stroke="var(--text-main)" stroke-width="4.5" />
+          <line x1="30" y1="70" x2="43.5" y2="56.5" stroke="var(--text-main)" stroke-width="3.5" />
+          <circle cx="48" cy="52" r="5.5" fill="var(--bg-page)" stroke="var(--text-main)" stroke-width="2.5" />
+          <circle cx="48" cy="52" r="2.2" fill="var(--brand-coral)" />
+          <line x1="52.5" y1="47.5" x2="71" y2="29" stroke="var(--brand-coral)" stroke-width="3.5" />
+          <polygon points="80,20 64,25.5 74.5,36" fill="var(--brand-coral)" stroke="none" />
         </svg>
         <span class="logo-name">Calle<span class="accent-text">Nomad</span></span>
       </a>
@@ -1509,6 +1543,14 @@ section { padding: 85px 0; }
               "¡Buenas! ¿Cómo le va? ¿Me regala la clave del wifi y una mesita cerca al enchufe, porfa? Vengo a trabajar un ratico."
             </div>
 
+            <div class="phrase-audio-row">
+              <audio id="phraseAudio" preload="none"></audio>
+              <button class="btn-listen" id="btnListenPhrase" aria-label="Play native speaker audio">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <span id="btnListenLabel">🔊 Listen</span>
+              </button>
+            </div>
+
             <div class="phrase-breakdown-grid">
               <div>
                 <span class="breakdown-label">In plain English:</span>
@@ -1726,19 +1768,13 @@ section { padding: 85px 0; }
     <div class="container footer-content">
       <div class="footer-brand">
         <a href="#" class="brand-logo">
-          <svg class="brand-logo-mark" viewBox="0 0 36 36" width="34" height="34" fill="none" aria-hidden="true">
-            <rect width="36" height="36" rx="10" fill="var(--brand-coral)" fill-opacity="0.10" />
-            <circle cx="18" cy="18" r="12" stroke="var(--text-main)" stroke-width="1.2" stroke-dasharray="1.5 2.5" stroke-opacity="0.25" />
-            <line x1="18" y1="3.5" x2="18" y2="5.5" stroke="var(--brand-coral)" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="18" y1="30.5" x2="18" y2="32.5" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-            <line x1="3.5" y1="18" x2="5.5" y2="18" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-            <line x1="30.5" y1="18" x2="32.5" y2="18" stroke="var(--text-main)" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.4" />
-            <path d="M7 27 C 12 24, 15 19, 18 18 C 21 17, 24 12, 29 9" stroke="var(--brand-green)" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.45" stroke-dasharray="1.5 2.5" />
-            <polygon points="18,7 21.5,18 18,15.5" fill="var(--brand-coral)" />
-            <polygon points="18,7 14.5,18 18,15.5" fill="var(--brand-coral-hover)" />
-            <polygon points="18,29 21.5,18 18,20.5" fill="var(--text-main)" />
-            <polygon points="18,29 14.5,18 18,20.5" fill="var(--text-secondary)" />
-            <circle cx="18" cy="18" r="2.25" fill="var(--bg-card)" stroke="var(--brand-coral)" stroke-width="1.5" />
+          <svg class="brand-logo-mark" viewBox="0 0 100 100" width="34" height="34" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 69 33 A 29 29 0 1 0 69 71" fill="none" stroke="var(--text-main)" stroke-width="4.5" />
+            <line x1="30" y1="70" x2="43.5" y2="56.5" stroke="var(--text-main)" stroke-width="3.5" />
+            <circle cx="48" cy="52" r="5.5" fill="var(--bg-page)" stroke="var(--text-main)" stroke-width="2.5" />
+            <circle cx="48" cy="52" r="2.2" fill="var(--brand-coral)" />
+            <line x1="52.5" y1="47.5" x2="71" y2="29" stroke="var(--brand-coral)" stroke-width="3.5" />
+            <polygon points="80,20 64,25.5 74.5,36" fill="var(--brand-coral)" stroke="none" />
           </svg>
           <span class="logo-name">Calle<span class="accent-text">Nomad</span></span>
         </a>
@@ -1781,31 +1817,36 @@ section { padding: 85px 0; }
         category: '☕ Cafe & Workspace',
         quote: '¡Buenas! ¿Cómo le va? ¿Me regala la clave del wifi y una mesita cerca al enchufe, porfa? Vengo a trabajar un ratico.',
         literal: 'Hello! How is it going? Could you give me the wifi password and a table near the socket, please? I have come to work for a little bit.',
-        tip: 'In Colombia and across much of Latin America, opening with "¿Me regala...?" is the ultimate polite, warm greeting. Saying "un ratico" adds friendly natural warmth that staff love.'
+        tip: 'In Colombia and across much of Latin America, opening with "¿Me regala...?" is the ultimate polite, warm greeting. Saying "un ratico" adds friendly natural warmth that staff love.',
+        audio: 'audio/wifi.flac'
       },
       rent: {
         category: '🏡 WhatsApp Landlord Negotiation',
         quote: 'Hola, buenas tardes. Me gustó muchísimo el apartamento. ¿Habría posibilidad de cuadrar un arriendo mensual directo si me quedo dos o tres meses?',
         literal: 'Hello, good afternoon. I really liked the apartment. Would there be a possibility to agree on a direct monthly rental if I stay two or three months?',
-        tip: '"Cuadrar" is the universal Latin American verb for sorting out, aligning, or finalizing an agreement. Asking for an "arriendo mensual directo" is the natural way to propose bypassing app fees.'
+        tip: '"Cuadrar" is the universal Latin American verb for sorting out, aligning, or finalizing an agreement. Asking for an "arriendo mensual directo" is the natural way to propose bypassing app fees.',
+        audio: 'audio/rent.flac'
       },
       food: {
         category: '🍲 Local Eatery & Menu',
         quote: 'Buenas, ¿qué almuerzo tiene para hoy? ¿Viene con sopa o frijoles? Y me regala juguito natural en agua, por favor.',
         literal: 'Hello, what lunch do you have for today? Does it come with soup or beans? And could you give me natural fruit juice in water, please.',
-        tip: 'Daily set menus (almuerzos del día) are the heartbeat of Latin America. Specifying "en agua" (in water) or "en leche" (with milk) is how you order fresh tropical fruit juices.'
+        tip: 'Daily set menus (almuerzos del día) are the heartbeat of Latin America. Specifying "en agua" (in water) or "en leche" (with milk) is how you order fresh tropical fruit juices.',
+        audio: 'audio/food.flac'
       },
       ride: {
         category: '🚕 Coordinating a Ride',
         quote: 'Buenas, ya voy saliendo del edificio y estoy en la portería. Me avisa cuando esté afuera, porfa.',
         literal: 'Hello, I am now heading out of the building and I am at the main entrance gate. Let me know when you are outside, please.',
-        tip: 'In South American apartment buildings, "la portería" is the 24/7 security gatehouse. Sending this quick WhatsApp note stops drivers from cancelling or waiting on the wrong corner.'
+        tip: 'In South American apartment buildings, "la portería" is the 24/7 security gatehouse. Sending this quick WhatsApp note stops drivers from cancelling or waiting on the wrong corner.',
+        audio: 'audio/ride.flac'
       },
       social: {
         category: '🤝 Relaxed Social Banter',
         quote: '¡Qué buen plan! Me encantaría. Vamos a tomar un café y charlar un rato. ¿A qué horas nos vemos?',
         literal: 'What a great plan! I would love to. Let us go grab a coffee and chat for a while. What time shall we meet?',
-        tip: '"Charlar" (to chat) and "¡Qué buen plan!" are warm, friendly expressions used daily by locals. It sounds natural, open, and effortless.'
+        tip: '"Charlar" (to chat) and "¡Qué buen plan!" are warm, friendly expressions used daily by locals. It sounds natural, open, and effortless.',
+        audio: 'audio/social.flac'
       }
     };
 
@@ -1920,6 +1961,7 @@ section { padding: 85px 0; }
       } catch (e) {}
 
       render();
+      initAudio();
     }
 
     function render() {
@@ -1929,6 +1971,43 @@ section { padding: 85px 0; }
       document.getElementById('phraseQuote').innerText = `"${d.quote}"`;
       document.getElementById('phraseLiteral').innerText = `"${d.literal}"`;
       document.getElementById('phraseTip').innerHTML = d.tip;
+
+      // Wire audio player
+      const audioEl = document.getElementById('phraseAudio');
+      const listenBtn = document.getElementById('btnListenPhrase');
+      const listenLabel = document.getElementById('btnListenLabel');
+      if (audioEl && listenBtn) {
+        audioEl.pause();
+        audioEl.src = d.audio || '';
+        audioEl.load();
+        listenLabel.textContent = '🔊 Listen';
+        listenBtn.classList.remove('playing');
+      }
+    }
+
+    function initAudio() {
+      const audioEl = document.getElementById('phraseAudio');
+      const listenBtn = document.getElementById('btnListenPhrase');
+      const listenLabel = document.getElementById('btnListenLabel');
+      if (!audioEl || !listenBtn) return;
+
+      listenBtn.addEventListener('click', () => {
+        if (audioEl.paused) {
+          audioEl.play();
+          listenLabel.textContent = '⏸ Playing…';
+          listenBtn.classList.add('playing');
+        } else {
+          audioEl.pause();
+          audioEl.currentTime = 0;
+          listenLabel.textContent = '🔊 Listen';
+          listenBtn.classList.remove('playing');
+        }
+      });
+
+      audioEl.addEventListener('ended', () => {
+        listenLabel.textContent = '🔊 Listen';
+        listenBtn.classList.remove('playing');
+      });
     }
 
     if (document.readyState === 'loading') {
@@ -1958,14 +2037,14 @@ section { padding: 85px 0; }
     <div class="dock-section">
       <span class="palette-dock-label">Fonts:</span>
       <div class="dock-btn-group">
-        <button type="button" class="palette-btn font-btn active" id="fontOutfitInter" data-font="outfit-inter" title="Headings: Outfit • Body: Inter">
-          <span>Outfit + Inter</span>
+        <button type="button" class="palette-btn font-btn active" id="fontOutfitJakarta" data-font="outfit-jakarta" title="Headings: Outfit • Body: Plus Jakarta Sans">
+          <span>Outfit + Jakarta</span>
         </button>
         <button type="button" class="palette-btn font-btn" id="fontJakartaAll" data-font="jakarta-all" title="Headings & Body: Plus Jakarta Sans">
           <span>Jakarta Sans (All)</span>
         </button>
-        <button type="button" class="palette-btn font-btn" id="fontJakartaInter" data-font="jakarta-inter" title="Headings: Plus Jakarta Sans • Body: Inter">
-          <span>Jakarta + Inter</span>
+        <button type="button" class="palette-btn font-btn" id="fontOutfitInter" data-font="outfit-inter" title="Headings: Outfit • Body: Inter">
+          <span>Outfit + Inter</span>
         </button>
       </div>
     </div>
