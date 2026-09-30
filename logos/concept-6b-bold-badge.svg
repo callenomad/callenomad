@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Concept 6B: The Bold Badge & Favicon Monogram -->
+  <!-- Heavyweight 5.5px stroke weight optimized for 16px/32px mobile displays -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Bold 'Calle' Arc C -->
+    <path 
+      d="M 68 34 
+         A 28 28 0 1 0 68 70" 
+      fill="none" 
+      stroke="#1E2229" 
+      stroke-width="5.5" 
+    />
+    
+    <!-- Bold Southwest Needle Tail -->
+    <line x1="31" y1="69" x2="43" y2="57" stroke="#1E2229" stroke-width="4.5" />
+    
+    <!-- Central Waypoint Pivot -->
+    <circle cx="48" cy="52" r="6" fill="#FCFBFA" stroke="#1E2229" stroke-width="3" />
+    <circle cx="48" cy="52" r="2.8" fill="#D94E36" />
+    
+    <!-- Bold Northeast Arrowhead Vector -->
+    <line x1="53" y1="47" x2="68" y2="32" stroke="#D94E36" stroke-width="4.5" />
+    <polygon points="82,18 63,25 75,37" fill="#D94E36" />
+  </g>
+</svg>

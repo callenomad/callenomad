@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Concept 6D: The Fluid Monoline Monogram -->
+  <!-- Continuous ribbon flow from the Calle arc directly into the Nomad vector -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Unbroken Fluid 'C' into Vector Spine -->
+    <path 
+      d="M 69 33 
+         A 29 29 0 1 0 46 81
+         C 34 78, 36 62, 48 52
+         L 72 28" 
+      fill="none" 
+      stroke="#1E2229" 
+      stroke-width="4.2" 
+    />
+    
+    <!-- Central Pivot Waypoint Core -->
+    <circle cx="48" cy="52" r="5" fill="#FCFBFA" stroke="#1E2229" stroke-width="2.5" />
+    <circle cx="48" cy="52" r="2.2" fill="#D94E36" />
+    
+    <!-- Dynamic Terracotta Arrowhead -->
+    <polygon points="80,20 64,25.5 74.5,36" fill="#D94E36" />
+  </g>
+</svg>
