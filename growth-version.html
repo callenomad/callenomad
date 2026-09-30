@@ -6,7 +6,20 @@
   <title>CalleNomad | Practical Spanish for Digital Nomads</title>
   <meta name="description" content="1-on-1 practical Spanish coaching for remote workers living and traveling in Latin America. Master cafe wifi, WhatsApp landlord negotiations, and real street conversations in 6 weeks.">
   <meta name="keywords" content="digital nomad spanish, learn spanish colombia, spanish for remote workers, barranquilla spanish, calle nomad, ben chiverton-hunt">
-  
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://callenomad.com">
+  <meta property="og:title" content="CalleNomad | Practical Spanish for Digital Nomads">
+  <meta property="og:description" content="1-on-1 street Spanish coaching for remote workers in Latin America. Master café Wi-Fi, WhatsApp landlord negotiations, and real conversations in 6 weeks.">
+  <meta property="og:image" content="https://callenomad.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CalleNomad | Practical Spanish for Digital Nomads">
+  <meta name="twitter:description" content="1-on-1 street Spanish coaching for remote workers in Latin America. Master café Wi-Fi, WhatsApp landlord negotiations, and real conversations in 6 weeks.">
+  <meta name="twitter:image" content="https://callenomad.com/og-image.jpg">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -792,6 +805,29 @@ section { padding: 85px 0; }
 
 .btn-copy:hover { border-color: var(--border-medium); color: var(--text-main); }
 
+.phrase-audio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  background: var(--bg-section);
+  border: 1.5px solid var(--brand-green);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-green);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-listen:hover { background: var(--brand-green); color: #fff; }
+.btn-listen.playing { background: var(--brand-green); color: #fff; }
+
 .phrase-quote {
   font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   font-weight: 600;
@@ -1507,6 +1543,14 @@ section { padding: 85px 0; }
               "¡Buenas! ¿Cómo le va? ¿Me regala la clave del wifi y una mesita cerca al enchufe, porfa? Vengo a trabajar un ratico."
             </div>
 
+            <div class="phrase-audio-row">
+              <audio id="phraseAudio" preload="none"></audio>
+              <button class="btn-listen" id="btnListenPhrase" aria-label="Play native speaker audio">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <span id="btnListenLabel">🔊 Listen</span>
+              </button>
+            </div>
+
             <div class="phrase-breakdown-grid">
               <div>
                 <span class="breakdown-label">In plain English:</span>
@@ -1773,31 +1817,36 @@ section { padding: 85px 0; }
         category: '☕ Cafe & Workspace',
         quote: '¡Buenas! ¿Cómo le va? ¿Me regala la clave del wifi y una mesita cerca al enchufe, porfa? Vengo a trabajar un ratico.',
         literal: 'Hello! How is it going? Could you give me the wifi password and a table near the socket, please? I have come to work for a little bit.',
-        tip: 'In Colombia and across much of Latin America, opening with "¿Me regala...?" is the ultimate polite, warm greeting. Saying "un ratico" adds friendly natural warmth that staff love.'
+        tip: 'In Colombia and across much of Latin America, opening with "¿Me regala...?" is the ultimate polite, warm greeting. Saying "un ratico" adds friendly natural warmth that staff love.',
+        audio: 'audio/wifi.m4a'
       },
       rent: {
         category: '🏡 WhatsApp Landlord Negotiation',
         quote: 'Hola, buenas tardes. Me gustó muchísimo el apartamento. ¿Habría posibilidad de cuadrar un arriendo mensual directo si me quedo dos o tres meses?',
         literal: 'Hello, good afternoon. I really liked the apartment. Would there be a possibility to agree on a direct monthly rental if I stay two or three months?',
-        tip: '"Cuadrar" is the universal Latin American verb for sorting out, aligning, or finalizing an agreement. Asking for an "arriendo mensual directo" is the natural way to propose bypassing app fees.'
+        tip: '"Cuadrar" is the universal Latin American verb for sorting out, aligning, or finalizing an agreement. Asking for an "arriendo mensual directo" is the natural way to propose bypassing app fees.',
+        audio: 'audio/rent.m4a'
       },
       food: {
         category: '🍲 Local Eatery & Menu',
         quote: 'Buenas, ¿qué almuerzo tiene para hoy? ¿Viene con sopa o frijoles? Y me regala juguito natural en agua, por favor.',
         literal: 'Hello, what lunch do you have for today? Does it come with soup or beans? And could you give me natural fruit juice in water, please.',
-        tip: 'Daily set menus (almuerzos del día) are the heartbeat of Latin America. Specifying "en agua" (in water) or "en leche" (with milk) is how you order fresh tropical fruit juices.'
+        tip: 'Daily set menus (almuerzos del día) are the heartbeat of Latin America. Specifying "en agua" (in water) or "en leche" (with milk) is how you order fresh tropical fruit juices.',
+        audio: 'audio/food.m4a'
       },
       ride: {
         category: '🚕 Coordinating a Ride',
         quote: 'Buenas, ya voy saliendo del edificio y estoy en la portería. Me avisa cuando esté afuera, porfa.',
         literal: 'Hello, I am now heading out of the building and I am at the main entrance gate. Let me know when you are outside, please.',
-        tip: 'In South American apartment buildings, "la portería" is the 24/7 security gatehouse. Sending this quick WhatsApp note stops drivers from cancelling or waiting on the wrong corner.'
+        tip: 'In South American apartment buildings, "la portería" is the 24/7 security gatehouse. Sending this quick WhatsApp note stops drivers from cancelling or waiting on the wrong corner.',
+        audio: 'audio/ride.m4a'
       },
       social: {
         category: '🤝 Relaxed Social Banter',
         quote: '¡Qué buen plan! Me encantaría. Vamos a tomar un café y charlar un rato. ¿A qué horas nos vemos?',
         literal: 'What a great plan! I would love to. Let us go grab a coffee and chat for a while. What time shall we meet?',
-        tip: '"Charlar" (to chat) and "¡Qué buen plan!" are warm, friendly expressions used daily by locals. It sounds natural, open, and effortless.'
+        tip: '"Charlar" (to chat) and "¡Qué buen plan!" are warm, friendly expressions used daily by locals. It sounds natural, open, and effortless.',
+        audio: 'audio/social.m4a'
       }
     };
 
@@ -1912,6 +1961,7 @@ section { padding: 85px 0; }
       } catch (e) {}
 
       render();
+      initAudio();
     }
 
     function render() {
@@ -1921,6 +1971,43 @@ section { padding: 85px 0; }
       document.getElementById('phraseQuote').innerText = `"${d.quote}"`;
       document.getElementById('phraseLiteral').innerText = `"${d.literal}"`;
       document.getElementById('phraseTip').innerHTML = d.tip;
+
+      // Wire audio player
+      const audioEl = document.getElementById('phraseAudio');
+      const listenBtn = document.getElementById('btnListenPhrase');
+      const listenLabel = document.getElementById('btnListenLabel');
+      if (audioEl && listenBtn) {
+        audioEl.pause();
+        audioEl.src = d.audio || '';
+        audioEl.load();
+        listenLabel.textContent = '🔊 Listen';
+        listenBtn.classList.remove('playing');
+      }
+    }
+
+    function initAudio() {
+      const audioEl = document.getElementById('phraseAudio');
+      const listenBtn = document.getElementById('btnListenPhrase');
+      const listenLabel = document.getElementById('btnListenLabel');
+      if (!audioEl || !listenBtn) return;
+
+      listenBtn.addEventListener('click', () => {
+        if (audioEl.paused) {
+          audioEl.play();
+          listenLabel.textContent = '⏸ Playing…';
+          listenBtn.classList.add('playing');
+        } else {
+          audioEl.pause();
+          audioEl.currentTime = 0;
+          listenLabel.textContent = '🔊 Listen';
+          listenBtn.classList.remove('playing');
+        }
+      });
+
+      audioEl.addEventListener('ended', () => {
+        listenLabel.textContent = '🔊 Listen';
+        listenBtn.classList.remove('playing');
+      });
     }
 
     if (document.readyState === 'loading') {
