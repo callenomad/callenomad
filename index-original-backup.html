@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalleNomad | Practical Spanish for Digital Nomads</title>
+  <meta name="description" content="Learn practical, everyday Latin American Spanish from an English-speaking nomad who learned through real-life immersion in South America. Friendly 1-on-1 coaching based in Colombia.">
+  <meta name="keywords" content="digital nomad spanish, learn spanish colombia, spanish for remote workers, barranquilla spanish, calle nomad, ben chiverton-hunt">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+
+  <!-- Typography: Inter + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="#" class="brand-logo" aria-label="CalleNomad Home">
+        <span class="logo-mark">🧭</span>
+        <span class="logo-name">Calle<span class="accent-text">Nomad</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">Meet Your Coach</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#dialect-lab" class="nav-link">Everyday Spanish Lab</a>
+        <a href="#packages" class="nav-link">Programs & Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">
+          Book a Free 20-Min Chat
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#about" class="mobile-link">Meet Your Coach</a>
+        <a href="#how-it-works" class="mobile-link">How It Works</a>
+        <a href="#dialect-lab" class="mobile-link">Everyday Spanish Lab</a>
+        <a href="#packages" class="mobile-link">Programs & Pricing</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full mt-4">
+          Book a Free 20-Min Chat
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>1-on-1 Spanish Coaching for Remote Workers & Travelers</span>
+        </div>
+
+        <h1 class="hero-title">
+          Feel at home in Latin America.<br class="desktop-break">
+          <span class="highlight-underline">Speak like you actually live here.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Language apps teach you how to say <em>"the monkey drinks milk"</em>. CalleNomad helps you chat comfortably with your barista, handle apartment details over WhatsApp, and make genuine local friends without feeling like an awkward tourist.
+        </p>
+
+        <div class="hero-cta-cluster">
+          <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Book a Free 20-Min Chat</span>
+          </a>
+          <a href="#about" class="btn btn-secondary btn-large">
+            <span>Meet Your Coach</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="hero-pill-row">
+          <span class="pill-item">🇨🇴 Based in Colombia</span>
+          <span class="pill-item">☕ Cafe & Wi-Fi Etiquette</span>
+          <span class="pill-item">🏡 Direct Apartment Chats</span>
+          <span class="pill-item">💬 Natural WhatsApp Voice Notes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET YOUR COACH SECTION -->
+    <section class="coach-section" id="about">
+      <div class="container">
+        <div class="coach-card">
+          <div class="coach-image-wrapper">
+            <img src="coach.jpg" alt="Ben, Founder and Spanish Coach at CalleNomad" class="coach-photo">
+            <div class="coach-badge-tag">
+              <span class="badge-pin">📍</span>
+              <span>Barranquilla, Colombia</span>
+            </div>
+          </div>
+
+          <div class="coach-content">
+            <span class="section-tag">Meet Your Coach</span>
+            <h2 class="coach-name">Hi, I'm Ben 👋</h2>
+            <p class="coach-lead">
+              Originally from the UK, I've spent the past few years traveling and living all across South America. Today, I'm based in Barranquilla on Colombia's Caribbean coast.
+            </p>
+            <p class="coach-story">
+              Like almost every traveler, I started out with the popular apps and grammar books. But when I actually arrived, I quickly realized how disconnected textbook exercises were from real daily life. When a driver called or an Airbnb host sent an audio note, I’d completely freeze up.
+            </p>
+            <p class="coach-story">
+              I learned Spanish the real way: through <strong>full everyday immersion</strong>. Navigating local bus routes, negotiating direct rentals on WhatsApp, making native friends, and chatting with market vendors.
+            </p>
+            <p class="coach-story">
+              Because I learned as an adult, I understand exactly where English speakers get tripped up, why textbook grammar feels overwhelming, and how to build the confidence to speak up naturally. I'm here to give you the exact conversational shortcuts and ear for the language that you need to thrive anywhere in Latin America.
+            </p>
+
+            <div class="coach-values-grid">
+              <div class="val-item">
+                <span class="val-icon">🇬🇧 &rarr; 🇨🇴</span>
+                <div>
+                  <strong>I've been in your shoes</strong>
+                  <p>I know the frustration of freezing up and the joy of finally feeling at home.</p>
+                </div>
+              </div>
+              <div class="val-item">
+                <span class="val-icon">✨</span>
+                <div>
+                  <strong>Clear Latin American Spanish</strong>
+                  <p>Rooted in Colombia's famous conversational warmth and crystal-clear pronunciation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM VS THE REALITY -->
+    <section class="reality-section">
+      <div class="container">
+        <div class="reality-grid">
+          <div class="reality-card reality-left">
+            <div class="card-eyebrow text-muted">Why traditional apps leave you feeling stuck</div>
+            <h3 class="reality-heading">Isolated vocabulary and zero real practice</h3>
+            <p class="reality-text">
+              You can swipe through flashcards for months, but the moment a local driver calls to ask where you're waiting or an Airbnb host sends a 30-second audio note, everything freezes up. You're left copying text into translation apps and feeling trapped in an English-only expat bubble.
+            </p>
+            <ul class="check-list red-crosses">
+              <li>✕ Abstract sentences nobody actually says in daily conversation</li>
+              <li>✕ No practice with voice notes—how everyday Latin America communicates</li>
+              <li>✕ Missing out on genuine local friendships because you feel self-conscious</li>
+            </ul>
+          </div>
+
+          <div class="reality-card reality-right">
+            <div class="card-eyebrow text-accent">The CalleNomad Approach</div>
+            <h3 class="reality-heading">Practical conversations with genuine warmth</h3>
+            <p class="reality-text">
+              We focus entirely on the interactions that make living abroad enjoyable and smooth. You practice real dialogues in a supportive, relaxed setting so you feel confident walking into neighborhood spots and speaking up.
+            </p>
+            <ul class="check-list green-checks">
+              <li>✓ Understand and reply to natural WhatsApp audio notes with ease</li>
+              <li>✓ Talk through housing questions, local services, and dining comfortably</li>
+              <li>✓ Clear, polite everyday Latin American Spanish that works everywhere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW SESSIONS WORK -->
+    <section class="blueprint-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">A Thoughtful Structure</span>
+          <h2 class="section-title">How our 50-minute sessions work</h2>
+          <p class="section-subtitle">
+            Every session is a relaxed, supportive 1-on-1 conversation tailored to where you are traveling and the situations you care about most.
+          </p>
+        </div>
+
+        <div class="blueprint-timeline">
+          <div class="blueprint-step">
+            <div class="step-time">10 Min</div>
+            <div class="step-body">
+              <h3 class="step-title">Conversational Warm-up</h3>
+              <p class="step-desc">Pick up the natural filler words and transitions (<em>"la verdad", "a ver", "o sea", "pues"</em>) that help you sound relaxed and fluent instead of like a textbook.</p>
+            </div>
+          </div>
+
+          <div class="blueprint-step">
+            <div class="step-time">20 Min</div>
+            <div class="step-body">
+              <h3 class="step-title">Real-Life Practice</h3>
+              <p class="step-desc">We simulate everyday moments together: checking in with your host, asking a barista about working spots, asking a shopkeeper for advice, or meeting new people.</p>
+            </div>
+          </div>
+
+          <div class="blueprint-step">
+            <div class="step-time">15 Min</div>
+            <div class="step-body">
+              <h3 class="step-title">Listening & Flow</h3>
+              <p class="step-desc">We gently tune your ear to normal speaking speeds and smooth out any pronunciation quirks so you can express your thoughts with ease.</p>
+            </div>
+          </div>
+
+          <div class="blueprint-step">
+            <div class="step-time">5 Min</div>
+            <div class="step-body">
+              <h3 class="step-title">A Fun Weekly Mission</h3>
+              <p class="step-desc">A low-pressure, real-world prompt for your week—like trying a new dish at a neighborhood eatery or sending a voice message to a local friend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE EVERYDAY SPANISH LAB -->
+    <section class="dialect-lab-section" id="dialect-lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Phrase Explorer</span>
+          <h2 class="section-title">Everyday Latin American Spanish in action</h2>
+          <p class="section-subtitle">
+            Here are the real phrases you'll use day-to-day. Click through the categories below to hear the pronunciation and explore how locals naturally speak.
+          </p>
+        </div>
+
+        <div class="lab-card">
+          <!-- Situation Pills -->
+          <div class="lab-scenarios">
+            <span class="lab-label">Situation:</span>
+            <button class="scenario-btn active" data-scenario="wifi">☕ Working at a Local Cafe</button>
+            <button class="scenario-btn" data-scenario="rent">🏡 Chatting with an Apartment Host</button>
+            <button class="scenario-btn" data-scenario="food">🍲 Ordering at a Local Eatery</button>
+            <button class="scenario-btn" data-scenario="ride">🚕 Coordinating a Ride</button>
+            <button class="scenario-btn" data-scenario="social">🤝 Relaxed Social Banter</button>
+          </div>
+
+          <!-- Active Phrase Display Panel -->
+          <div class="lab-display">
+            <div class="lab-meta-bar">
+              <span class="lab-city-indicator" id="labCityIndicator">☕ Cafe & Workspace</span>
+              <button class="btn-copy" id="btnCopyPhrase">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Phrase</span>
+              </button>
+            </div>
+
+            <div class="lab-phrase" id="labPhrase">
+              "¡Buenas! ¿Cómo le va? ¿Me regala la clave del wifi y una mesita cerca al enchufe, porfa? Vengo a trabajar un ratico."
+            </div>
+
+            <div class="lab-details-grid">
+              <div class="lab-detail-col">
+                <span class="detail-label">In plain English:</span>
+                <p id="labLiteral">"Hello! How is it going? Could you give me the wifi password and a table near the socket, please? I've come to work for a little bit."</p>
+              </div>
+              <div class="lab-detail-col">
+                <span class="detail-label">Why this works so well:</span>
+                <p id="labTip">In Colombia and across much of Latin America, opening with <em>"¿Me regala...?"</em> is the ultimate polite, warm greeting. Saying <em>"un ratico"</em> adds friendly natural warmth that staff love.</p>
+              </div>
+            </div>
+
+            <div class="lab-audio-bar">
+              <button class="btn btn-audio" id="btnSpeakPhrase">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <span>Listen to Pronunciation</span>
+              </button>
+              <span class="phonetic-text" id="labPhonetic">bweh-nas! koh-moh leh vah? meh reh-gah-lah lah clah-veh del wee-fee...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PROGRAMS & PRICING -->
+    <section class="packages-section" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clear & Transparent</span>
+          <h2 class="section-title">Coaching Programs</h2>
+          <p class="section-subtitle">
+            All lessons are private 50-minute sessions. We recommend starting with a free chat so we can understand your travel plans and goals.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1: The Quick Start -->
+          <div class="package-card">
+            <div class="pkg-header">
+              <h3 class="pkg-title">The Quick Start: Arrival Basics</h3>
+              <p class="pkg-subtitle">A practical foundation for anyone landing in Latin America this month.</p>
+              <div class="pkg-price">
+                <span class="currency">$</span>
+                <span class="amount">129</span>
+                <span class="denom">USD</span>
+              </div>
+              <div class="pkg-duration">2 Weeks • 3 Private Sessions (50 min)</div>
+            </div>
+
+            <ul class="pkg-features">
+              <li><span class="check">✓</span> 3 Private 1-on-1 sessions focused on immediate essentials</li>
+              <li><span class="check">✓</span> Seamless airport arrivals and coordinating rides</li>
+              <li><span class="check">✓</span> Ordering at cafes and asking for Wi-Fi comfortably</li>
+              <li><span class="check">✓</span> A 1-page emergency phrase reference on your phone</li>
+              <li><span class="check">✓</span> Simple grocery, pharmacy, and market conversations</li>
+            </ul>
+
+            <a href="https://calendly.com/callenomad-info/the-nomad-crash-course-clone" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full">
+              Get Started ($129)
+            </a>
+          </div>
+
+          <!-- Package 2: The Core Immersion (Featured) -->
+          <div class="package-card featured-pkg">
+            <div class="pkg-badge">MOST POPULAR PATH 🌟</div>
+            <div class="pkg-header">
+              <h3 class="pkg-title">The Core Immersion</h3>
+              <p class="pkg-subtitle">Develop genuine conversation skills and feel completely at ease in everyday life.</p>
+              <div class="pkg-price">
+                <span class="currency">$</span>
+                <span class="amount">399</span>
+                <span class="denom">USD</span>
+              </div>
+              <div class="pkg-duration">6 Weeks • 6 Private Sessions (50 min)</div>
+            </div>
+
+            <ul class="pkg-features">
+              <li><span class="check">✓</span> <strong>Everything in Quick Start, plus:</strong></li>
+              <li><span class="check">✓</span> 6 Comprehensive 1-on-1 conversation sessions</li>
+              <li><span class="check">✓</span> <strong>Personal voice-note feedback on WhatsApp between lessons</strong></li>
+              <li><span class="check">✓</span> Talking through housing questions and direct leases</li>
+              <li><span class="check">✓</span> Relaxed social banter, humor, and getting to know people</li>
+              <li><span class="check">✓</span> Respectful haggling and polite everyday requests</li>
+              <li><span class="check">✓</span> Natural rhythm and accent guidance tailored to your travels</li>
+            </ul>
+
+            <a href="https://calendly.com/callenomad-info/the-nomad-crash-course-clone" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
+              Join the Immersion ($399)
+            </a>
+          </div>
+
+          <!-- Package 3: The Complete Insider -->
+          <div class="package-card">
+            <div class="pkg-header">
+              <h3 class="pkg-title">The Complete Insider</h3>
+              <p class="pkg-subtitle">Deep cultural ease and dedicated ongoing support for long-term remote residents.</p>
+              <div class="pkg-price">
+                <span class="currency">$</span>
+                <span class="amount">1,099</span>
+                <span class="denom">USD</span>
+              </div>
+              <div class="pkg-duration">12 Weeks • 24 Private Sessions (2x / week)</div>
+            </div>
+
+            <ul class="pkg-features">
+              <li><span class="check">✓</span> <strong>Everything in the Core Immersion</strong></li>
+              <li><span class="check">✓</span> 24 In-depth 50-minute sessions for complete confidence</li>
+              <li><span class="check">✓</span> <strong>Live text translation support</strong> when reviewing lease messages or contracts</li>
+              <li><span class="check">✓</span> Curriculum personalized to your work and hobbies</li>
+              <li><span class="check">✓</span> Priority direct WhatsApp access for quick daily questions</li>
+              <li><span class="check">✓</span> Practical guidance on local services, fitness, and community life</li>
+            </ul>
+
+            <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer" class="btn btn-outline w-full">
+              Explore Complete Insider ($1,099)
+            </a>
+          </div>
+        </div>
+
+        <!-- Free Chat Callout Banner -->
+        <div class="audit-callout">
+          <div class="audit-left">
+            <h3 class="audit-title">Unsure where to start? Let's chat for 20 minutes.</h3>
+            <p class="audit-desc">
+              Book a free introductory chat on Zoom. We'll talk about your travel plans, find out where you feel stuck when speaking Spanish, and share a few useful phrases you can put into practice right away. No pressure, ever.
+            </p>
+          </div>
+          <div class="audit-right">
+            <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+              Book a Free 20-Min Chat &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Common Questions</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Helpful answers about how our lessons and schedule work.</p>
+        </div>
+
+        <div class="faq-accordion" id="faqList">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>What happens during the free 20-minute chat?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>We meet on Zoom for a friendly, no-pressure conversation. We'll chat about where you are living or planning to travel, explore a couple of everyday scenarios (like ordering breakfast or chatting with a driver), and give you an honest sense of how to reach natural fluency faster.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Are sessions 1-on-1 or group classes?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>All core sessions are private 1-on-1 blocks (50 minutes each). This ensures the conversation moves at your pace and is customized to the specific places and situations you care about.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>How does WhatsApp voice note feedback work in the Core Immersion?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Between our live calls, you receive short, real-life prompts. You send a quick voice message (for example, how you'd ask an apartment host about the laundry or describe a weekend plan), and I respond with helpful tips on pronunciation, rhythm, and natural wording.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>What accent or dialect do you teach?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>We teach clear, natural Latin American Spanish. Because I live in Colombia, our phrasing reflects the musical clarity and warmth Colombia is famous for, which is understood effortlessly anywhere in Central and South America.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>What if I have to travel or reschedule a session?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Life on the road is fluid. You can easily reschedule any lesson through Calendly with at least 12 hours notice, making it easy to fit learning around flights, travel days, and remote work commitments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <span class="logo-mark">🧭</span>
+          <span class="logo-name">Calle<span class="accent-text">Nomad</span></span>
+        </a>
+        <p class="footer-tag">
+          Practical Latin American Spanish for remote workers and digital nomads. Taught from Barranquilla, Colombia.
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="f-col">
+          <h4>Navigation</h4>
+          <a href="#about">Meet Your Coach</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#dialect-lab">Spanish Lab</a>
+          <a href="#packages">Programs</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="f-col">
+          <h4>Connect</h4>
+          <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer">Book a Free 20-Min Chat</a>
+          <a href="mailto:callenomad.info@gmail.com">callenomad.info@gmail.com</a>
+          <a href="#" onclick="alert('Instagram: @callenomad'); return false;">Instagram (@callenomad)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 CalleNomad.com. All rights reserved.</p>
+      <p class="footer-subtext">Practical Spanish. Real confidence.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
