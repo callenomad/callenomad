@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Concept 6: The Waypoint Monogram (Calle 'C' + Nomad Compass Needle) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- The 'Calle' Open Ring (Arc 'C') -->
+    <path 
+      d="M 68 28 
+         A 30 30 0 1 0 68 72" 
+      fill="none" 
+      stroke="#1E2229" 
+      stroke-width="4" 
+    />
+    
+    <!-- Compass Needle (Nomad Direction Vector) -->
+    <!-- Southwest Tail (Dark Charcoal) -->
+    <line x1="32" y1="68" x2="47" y2="53" stroke="#1E2229" stroke-width="3" />
+    
+    <!-- Central Pivot Ring -->
+    <circle cx="50" cy="50" r="5" fill="#FCFBFA" stroke="#1E2229" stroke-width="2.5" />
+    
+    <!-- Northeast Arrowhead / Needle Tip (Terracotta Coral) -->
+    <line x1="53" y1="47" x2="78" y2="22" stroke="#D94E36" stroke-width="3" />
+    <polygon points="78,22 67,26 74,33" fill="#D94E36" />
+    
+    <!-- Subtle Coordinate Meridian -->
+    <circle cx="50" cy="50" r="1.8" fill="#1E2229" />
+  </g>
+</svg>

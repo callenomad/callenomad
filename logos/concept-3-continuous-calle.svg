@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Concept 3: The Continuous Calle (Fluid Nomad Path & Open 'C') -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Primary Flowing 'Calle' Path -->
+    <path 
+      d="M 72 32 
+         C 54 18, 24 24, 24 50 
+         C 24 76, 54 82, 72 68 
+         C 84 56, 78 38, 58 42
+         C 46 44, 42 56, 50 62
+         C 56 66, 64 64, 68 58" 
+      stroke="#1E2229" 
+      stroke-width="3.5" 
+    />
+    
+    <!-- Origin Node (Nomad Arrival) -->
+    <circle cx="72" cy="32" r="2.5" fill="#1E2229" stroke="#FCFBFA" stroke-width="1.5" />
+    
+    <!-- Destination Waypoint (Fluency & Local Community) -->
+    <circle cx="68" cy="58" r="4.5" fill="#D94E36" />
+    <circle cx="68" cy="58" r="1.5" fill="#FCFBFA" />
+  </g>
+</svg>
