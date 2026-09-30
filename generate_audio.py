@@ -11,7 +11,7 @@ import json
 import time
 import os
 
-API_KEY = "1a0b05eb-ceb4-41e8-a0be-0b8e924b32a6"
+API_KEY = os.environ.get("CAMB_API_KEY", "1a0b05eb-ceb4-41e8-a0be-0b8e924b32a6")
 BASE_URL = "https://client.camb.ai/apis"
 
 # Colombian Spanish voice - use Malena Medina (lang 58 = es-mx, close LATAM cadence)
