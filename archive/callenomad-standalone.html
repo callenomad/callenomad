@@ -1327,24 +1327,86 @@ section { padding: 85px 0; }
   animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.54s both;
 }
 
-/* Scroll Reveal Classes */
+/* Scroll Reveal Classes (Bi-directional in-view & out-of-view) */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Stagger Utilities */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
+
+/* Floating WhatsApp Business Button */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  padding: 11px 18px 11px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35), 0 2px 6px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+.whatsapp-float-btn:hover {
+  background-color: #20BD5A;
+  color: #FFFFFF;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45), 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.whatsapp-float-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.whatsapp-float-icon {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float-btn {
+    bottom: 82px;
+    left: 16px;
+    padding: 10px 15px 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float-btn {
+    bottom: 84px;
+    left: 14px;
+    padding: 11px;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    justify-content: center;
+  }
+  .whatsapp-float-label {
+    display: none;
+  }
+}
 
 /* Accessible Motion Sensitivity */
 @media (prefers-reduced-motion: reduce) {
@@ -1355,7 +1417,8 @@ section { padding: 85px 0; }
   .hero-section .cta-box,
   .hero-pill-row,
   .btn-listen.playing,
-  .btn {
+  .btn,
+  .whatsapp-float-btn {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
@@ -1677,6 +1740,11 @@ section { padding: 85px 0; }
               <span class="wa-icon">💬</span>
               <div>
                 <strong>Asynchronous WhatsApp Audio Coaching:</strong> In the 6-Week Bootcamp, students send 30- to 60-second voice notes practicing these exact scenarios and receive timestamped audio feedback on cadence and pronunciation.
+                <div style="margin-top: 8px;">
+                  <a href="https://wa.me/573502176541?text=%C2%A1Hola%20Ben!%20I%27m%20practicing%20the%20CalleNomad%20street%20phrases.%20Could%20we%20chat%3F" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green); font-weight: 700; text-decoration: underline; font-size: 0.9rem;">
+                    Have questions about audio coaching? Ask Ben on WhatsApp &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1907,6 +1975,7 @@ section { padding: 85px 0; }
         <div class="f-col">
           <h4>Connect</h4>
           <a href="https://calendly.com/callenomad-info/20min" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
+          <a href="https://wa.me/573502176541?text=%C2%A1Hola%20Ben!%20I%27m%20interested%20in%20CalleNomad%201-on-1%20Spanish%20coaching.%20Could%20we%20chat%3F" target="_blank" rel="noopener noreferrer">WhatsApp (+57 350 217 6541)</a>
           <a href="mailto:info@callenomad.com">info@callenomad.com</a>
           <a href="#" onclick="alert('Instagram: @callenomad'); return false;">Instagram (@callenomad)</a>
         </div>
@@ -2085,16 +2154,17 @@ section { padding: 85px 0; }
         return;
       }
 
-      const observer = new IntersectionObserver((entries, obs) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            obs.unobserve(entry.target);
+          } else {
+            entry.target.classList.remove('is-visible');
           }
         });
       }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -30px 0px'
+        threshold: 0.12,
+        rootMargin: '0px 0px -20px 0px'
       });
 
       revealElements.forEach(el => observer.observe(el));
@@ -2153,6 +2223,18 @@ section { padding: 85px 0; }
     }
   })();
   </script>
+
+  <!-- Floating WhatsApp Business Quick Contact Widget -->
+  <a href="https://wa.me/573502176541?text=%C2%A1Hola%20Ben!%20I%27m%20interested%20in%20CalleNomad%201-on-1%20Spanish%20coaching.%20Could%20we%20chat%3F" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat with Ben on WhatsApp (+57 350 217 6541)">
+    <svg class="whatsapp-float-icon" viewBox="0 0 32 32" width="24" height="24" fill="currentColor" aria-hidden="true">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1-.3-.1-.6-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1a9.5 9.5 0 0 1-5.1-4.5c-.2-.4 0-.6.2-.8l.5-.6.4-.6c.1-.2 0-.4 0-.5s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1.1.5s-1.5 1.5-1.5 3.6c0 2.1 1.5 4.2 1.7 4.5.3.3 3 4.6 7.3 6.4 1 .4 1.8.7 2.4.9 1 .3 2 .3 2.7.2.8-.1 2.5-1 2.8-2 .4-.9.4-1.8.3-2-.1-.2-.3-.3-.6-.5z"/>
+    </svg>
+    <span class="whatsapp-float-label">Chat on WhatsApp</span>
+  </a>
 
   <!-- Floating Palette & Typography Customizer Dock -->
   <aside class="palette-dock" aria-label="Design & Typography Customizer">
