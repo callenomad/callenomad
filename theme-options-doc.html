@@ -34,8 +34,9 @@
    Conversion-Optimized, High-Trust, Zero-Fluff
    ========================================================================== */
 
-:root {
-  /* Warm Terracotta & Caribbean Sand (Best for LatAm Immersion) */
+:root,
+body[data-theme="terracotta"] {
+  /* Option A: Warm Terracotta & Caribbean Sand (Best for LatAm Immersion) */
   --bg-page: #FCFBFA;
   --bg-surface: #F4F1EA;
   --bg-card: #FFFFFF;
@@ -55,6 +56,8 @@
   --brand-green-subtle: rgba(30, 111, 92, 0.12);
   --hero-glow: radial-gradient(circle at 50% 0%, rgba(217, 78, 54, 0.11), transparent 65%);
 
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -68,8 +71,45 @@
   --max-w: 1160px;
 }
 
-/* Typography Configuration (Outfit + Inter) */
-body {
+body[data-theme="minimalist"] {
+  /* Option B: Clean Modern Minimalist (High-End Digital Nomad Vibe) */
+  --bg-page: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-header: rgba(255, 255, 255, 0.94);
+  --border-light: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-dark: #0F172A;
+
+  --text-main: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  --brand-coral: #FF5A5F;
+  --brand-coral-hover: #E04E53;
+  --brand-green: #059669;
+  --brand-green-subtle: rgba(5, 150, 105, 0.08);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(255, 90, 95, 0.08), transparent 65%);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.09);
+}
+
+/* Dynamic Typography Combinations */
+body[data-font="outfit-jakarta"],
+body:not([data-font]) {
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body[data-font="jakarta-all"] {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body[data-font="outfit-inter"] {
   --font-heading: 'Outfit', sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -1137,6 +1177,119 @@ section { padding: 85px 0; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
 
+/* Floating Design & Typography Customizer Dock */
+.palette-dock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all var(--transition-fast);
+}
+
+.dock-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dock-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dock-divider {
+  height: 1px;
+  background: var(--border-light);
+  width: 100%;
+}
+
+.palette-dock-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  width: 78px;
+  flex-shrink: 0;
+}
+
+.palette-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.palette-btn:hover {
+  color: var(--text-main);
+  background: var(--bg-subtle);
+}
+
+.palette-btn.active {
+  background: var(--brand-coral);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.palette-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.swatch-terracotta { background: #D94E36; box-shadow: 0 0 0 1.5px #F4F1EA; }
+.swatch-minimalist { background: #FF5A5F; box-shadow: 0 0 0 1.5px #FFFFFF; }
+
+@media (max-width: 768px) {
+  .palette-dock {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .dock-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .dock-btn-group {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .palette-dock-label {
+    width: 100%;
+    font-size: 0.68rem;
+  }
+  .palette-btn {
+    padding: 5px 9px;
+    font-size: 0.74rem;
+  }
+}
+
 /* ==========================================================================
    ANIMATIONS & SCROLL REVEALS
    Subtle & Editorial, 0-dep Vanilla CSS + IntersectionObserver
@@ -1940,6 +2093,53 @@ section { padding: 85px 0; }
         }
       });
 
+      // Palette Switcher Logic
+      const btnThemeA = document.getElementById('themeA');
+      const btnThemeB = document.getElementById('themeB');
+
+      function switchTheme(theme) {
+        document.body.setAttribute('data-theme', theme);
+        try { localStorage.setItem('callenomad_theme', theme); } catch (e) {}
+        if (theme === 'minimalist') {
+          btnThemeB?.classList.add('active');
+          btnThemeA?.classList.remove('active');
+        } else {
+          btnThemeA?.classList.add('active');
+          btnThemeB?.classList.remove('active');
+        }
+      }
+
+      btnThemeA?.addEventListener('click', () => switchTheme('terracotta'));
+      btnThemeB?.addEventListener('click', () => switchTheme('minimalist'));
+
+      try {
+        const storedTheme = localStorage.getItem('callenomad_theme');
+        if (storedTheme) switchTheme(storedTheme);
+      } catch (e) {}
+
+      // Typography Switcher Logic
+      const fontBtns = document.querySelectorAll('.font-btn');
+
+      function switchFont(fontKey) {
+        document.body.setAttribute('data-font', fontKey);
+        try { localStorage.setItem('callenomad_font', fontKey); } catch (e) {}
+        fontBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-font') === fontKey);
+        });
+      }
+
+      fontBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const fontKey = btn.getAttribute('data-font');
+          if (fontKey) switchFont(fontKey);
+        });
+      });
+
+      try {
+        const storedFont = localStorage.getItem('callenomad_font');
+        if (storedFont) switchFont(storedFont);
+      } catch (e) {}
+
       render();
       initAudio();
       initScrollReveal();
@@ -2036,4 +2236,36 @@ section { padding: 85px 0; }
     <span class="whatsapp-float-label">Chat on WhatsApp</span>
   </a>
 
+  <!-- Floating Palette & Typography Customizer Dock -->
+  <aside class="palette-dock" aria-label="Design & Typography Customizer">
+    <div class="dock-section">
+      <span class="palette-dock-label">Palette:</span>
+      <div class="dock-btn-group">
+        <button type="button" class="palette-btn active" id="themeA" aria-label="Option A: Warm Terracotta">
+          <span class="palette-swatch swatch-terracotta"></span>
+          <span>Terracotta</span>
+        </button>
+        <button type="button" class="palette-btn" id="themeB" aria-label="Option B: Clean Modern">
+          <span class="palette-swatch swatch-minimalist"></span>
+          <span>Clean Modern</span>
+        </button>
+      </div>
+    </div>
+    <div class="dock-divider"></div>
+    <div class="dock-section">
+      <span class="palette-dock-label">Fonts:</span>
+      <div class="dock-btn-group">
+        <button type="button" class="palette-btn font-btn active" id="fontOutfitJakarta" data-font="outfit-jakarta" title="Headings: Outfit • Body: Plus Jakarta Sans">
+          <span>Outfit + Jakarta</span>
+        </button>
+        <button type="button" class="palette-btn font-btn" id="fontJakartaAll" data-font="jakarta-all" title="Headings & Body: Plus Jakarta Sans">
+          <span>Jakarta Sans (All)</span>
+        </button>
+        <button type="button" class="palette-btn font-btn" id="fontOutfitInter" data-font="outfit-inter" title="Headings: Outfit • Body: Inter">
+          <span>Outfit + Inter</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+</body>
 </html>
