@@ -59,7 +59,7 @@ We train you in the exact cadence and slang of where you are actually living:
 
 Book your free, zero-obligation **20-Minute Fluency Audit**:
 
-🔗 **Calendly:** [calendly.com/callenomad-info/20min](https://calendly.com/callenomad-info/20min)  
+🔗 **Calendly:** [calendly.com/callenomad-info/20min](https://cal.com/callenomad/20min)  
 🌐 **Website:** [callenomad.com](https://callenomad.com)  
 ✉️ **Inquiries:** info@callenomad.com  
 

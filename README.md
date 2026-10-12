@@ -10,7 +10,7 @@
 Based on the official business plan:
 
 1. **Free 20-Minute Fluency Audit**
-   - Direct qualification call via Calendly (`https://calendly.com/callenomad-info/20min`) to diagnose speaking bottlenecks and run real-world street simulations.
+   - Direct qualification call via Calendly (`https://cal.com/callenomad/20min`) to diagnose speaking bottlenecks and run real-world street simulations.
 
 2. **The 50-Minute Tactical Blueprint**
    - **10 Min**: High-yield street slang & local filler words.

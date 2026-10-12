@@ -151,7 +151,7 @@ In a **Free 20-Minute Fluency Audit** with a CalleNomad coach:
 3. You get a personalized tactical roadmap to sound like an insider within 30 days.
 
 👉 **Book your free 20-minute audit now:**  
-[https://calendly.com/callenomad-info/20min](https://calendly.com/callenomad-info/20min)
+[https://cal.com/callenomad/20min](https://cal.com/callenomad/20min)
 
 ---
 *© 2026 CalleNomad. Street Spanish for Digital Nomads. All rights reserved.*
