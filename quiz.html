@@ -684,7 +684,7 @@
                 30 native-speed street audio clips + 5 copy-paste WhatsApp scripts for landlords, dates, and taxis. (100% credited if you join the Bootcamp later!)
               </p>
             </div>
-            <a id="stripeVaultLink" href="https://buy.stripe.com/YOUR_19_USD_LINK" target="_blank" rel="noopener noreferrer" class="rec-btn rec-btn-dark">
+            <a id="stripeVaultLink" href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" target="_blank" rel="noopener noreferrer" class="rec-btn rec-btn-dark">
               Grab the Audio Vault ($19) &rarr;
             </a>
           </div>
@@ -704,7 +704,7 @@
     (function() {
       // Configuration Links
       const WEBHOOK_URL = ""; // Optional: Paste your Make.com or Zapier webhook URL here
-      const STRIPE_19_VAULT_LINK = "https://buy.stripe.com/YOUR_19_USD_LINK"; // Replace with your Stripe payment link
+      const STRIPE_19_VAULT_LINK = "https://buy.stripe.com/9B628r7dUh1G8LndbAcV203";
       const CAL_AUDIT_BASE_LINK = "https://cal.com/callenomad/20min";
 
       const QUESTIONS = [
@@ -879,6 +879,9 @@
 
         recBadge.textContent = `Recommended for ${selectedPainPoint}`;
         auditCalLink.href = `${CAL_AUDIT_BASE_LINK}?email=${encodeURIComponent(userEmail)}`;
+        if (stripeVaultLink) {
+          stripeVaultLink.href = `${STRIPE_19_VAULT_LINK}?prefilled_email=${encodeURIComponent(userEmail)}`;
+        }
 
         submitLeadBtn.disabled = false;
         submitLeadBtn.innerHTML = '<span>Unlock My Score + Free 30-Word PDF &rarr;</span>';
