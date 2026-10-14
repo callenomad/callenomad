@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Spanish Readiness Diagnostic | CalleNomad</title>
+  <meta name="description" content="Take the 60-second Street Spanish Diagnostic to test your real-world survival score in Colombia & Latin America. Unlock your free 30-Word Nomad Guide.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://callenomad.com/quiz">
+  <meta property="og:title" content="Street Spanish Readiness Diagnostic | CalleNomad">
+  <meta property="og:description" content="Are you paying the Gringo Tax? Find out your street score in 60 seconds.">
+  <meta property="og:image" content="https://callenomad.com/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #FCFBFA;
+      --bg-surface: #F4F1EA;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #EDE8DF;
+      --bg-header: rgba(252, 251, 250, 0.94);
+      --border-light: #E7E2D8;
+      --border-medium: #D9D2C5;
+      --border-dark: #1E2229;
+
+      --text-main: #1E2229;
+      --text-secondary: #4A4F58;
+      --text-muted: #717885;
+
+      --brand-coral: #D94E36;
+      --brand-coral-hover: #C23F28;
+      --brand-green: #1E6F5C;
+      --brand-green-subtle: rgba(30, 111, 92, 0.12);
+
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Outfit', sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(30, 34, 41, 0.04);
+      --shadow-md: 0 4px 20px rgba(30, 34, 41, 0.06);
+      --shadow-lg: 0 12px 36px rgba(30, 34, 41, 0.09);
+      --shadow-card: 0 16px 40px -10px rgba(30, 34, 41, 0.12);
+
+      --transition-fast: 0.18s ease;
+      --max-w: 720px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: var(--font-sans);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      line-height: 1.6;
+      background: var(--bg-page);
+      background-image: radial-gradient(circle at 50% 0%, rgba(217, 78, 54, 0.08), transparent 55%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: var(--bg-header);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0 20px;
+    }
+
+    .header-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo-mark {
+      width: 34px;
+      height: 34px;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .brand-logo:hover .brand-logo-mark {
+      transform: rotate(-8deg) scale(1.06);
+    }
+
+    .logo-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    .accent-text { color: var(--brand-coral); }
+
+    .header-back-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-medium);
+      background: var(--bg-card);
+      transition: all var(--transition-fast);
+    }
+
+    .header-back-link:hover {
+      color: var(--text-main);
+      border-color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    .quiz-container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 40px auto 60px;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    /* Quiz Card Wrapper */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-dark);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    @media (max-width: 640px) {
+      .quiz-card {
+        padding: 24px 20px;
+        border-radius: var(--radius-lg);
+      }
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius-full);
+    }
+
+    .badge-coral {
+      background: rgba(217, 78, 54, 0.12);
+      color: var(--brand-coral);
+    }
+
+    /* Step Views */
+    .step-view {
+      display: none;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .step-view.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Typography */
+    h2.step-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3.8vw, 2.1rem);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-top: 14px;
+      margin-bottom: 12px;
+    }
+
+    h3.question-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 2.8vw, 1.45rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text-main);
+      margin: 20px 0 24px;
+    }
+
+    p.step-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Form & Select */
+    .input-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .select-input, .text-input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      outline: none;
+    }
+
+    .select-input:focus, .text-input:focus {
+      background: #FFFFFF;
+      border-color: var(--brand-coral);
+      box-shadow: 0 0 0 3px rgba(217, 78, 54, 0.15);
+    }
+
+    /* Buttons */
+    .btn-submit {
+      width: 100%;
+      padding: 16px 28px;
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: var(--brand-coral);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(217, 78, 54, 0.28);
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background: var(--brand-coral-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(217, 78, 54, 0.35);
+    }
+
+    .btn-submit:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.75;
+      cursor: not-allowed;
+    }
+
+    /* Progress Bar */
+    .quiz-progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--brand-coral);
+      border-radius: var(--radius-full);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Quiz Options */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      padding: 16px 18px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all var(--transition-fast);
+    }
+
+    .option-btn:hover {
+      border-color: var(--brand-coral);
+      background: rgba(217, 78, 54, 0.04);
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 12px rgba(30, 34, 41, 0.05);
+    }
+
+    .option-btn .arrow-icon {
+      color: var(--border-medium);
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all var(--transition-fast);
+      flex-shrink: 0;
+    }
+
+    .option-btn:hover .arrow-icon {
+      color: var(--brand-coral);
+      transform: translateX(3px);
+    }
+
+    /* Results Screen */
+    .results-score-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .score-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .score-number {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--brand-coral);
+      line-height: 1.1;
+      margin: 8px 0;
+    }
+
+    .score-verdict {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      max-width: 480px;
+      margin: 0 auto 12px;
+      line-height: 1.5;
+    }
+
+    .pdf-download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: underline;
+      transition: color var(--transition-fast);
+    }
+
+    .pdf-download-link:hover {
+      color: var(--brand-coral);
+    }
+
+    /* Recommendation Cards Grid */
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .recommendations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .rec-card {
+      padding: 22px 20px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .rec-card-primary {
+      background: rgba(217, 78, 54, 0.04);
+      border: 2px solid var(--brand-coral);
+    }
+
+    .rec-card-secondary {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-medium);
+    }
+
+    .rec-card-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      display: inline-block;
+    }
+
+    .rec-badge-coral {
+      background: var(--brand-coral);
+      color: #FFFFFF;
+    }
+
+    .rec-badge-dark {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+    }
+
+    .rec-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 10px;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .rec-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .rec-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all var(--transition-fast);
+      display: block;
+    }
+
+    .rec-btn-coral {
+      background: var(--brand-coral);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(217, 78, 54, 0.25);
+    }
+
+    .rec-btn-coral:hover {
+      background: var(--brand-coral-hover);
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 16px rgba(217, 78, 54, 0.32);
+    }
+
+    .rec-btn-dark {
+      background: var(--border-dark);
+      color: #FFFFFF;
+    }
+
+    .rec-btn-dark:hover {
+      background: #000000;
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Footer */
+    .quiz-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="brand-logo" aria-label="CalleNomad Home">
+        <svg class="brand-logo-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 69 33 A 29 29 0 1 0 69 71" fill="none" stroke="var(--text-main)" stroke-width="4.5" />
+          <line x1="30" y1="70" x2="43.5" y2="56.5" stroke="var(--text-main)" stroke-width="3.5" />
+          <circle cx="48" cy="52" r="5.5" fill="var(--bg-page)" stroke="var(--text-main)" stroke-width="2.5" />
+          <circle cx="48" cy="52" r="2.2" fill="var(--brand-coral)" />
+          <line x1="52.5" y1="47.5" x2="71" y2="29" stroke="var(--brand-coral)" stroke-width="3.5" />
+          <polygon points="80,20 64,25.5 74.5,36" fill="var(--brand-coral)" stroke="none" />
+        </svg>
+        <span class="logo-name">Calle<span class="accent-text">Nomad</span></span>
+      </a>
+
+      <a href="/" class="header-back-link">
+        <span>&larr;</span>
+        <span>Back to Main Site</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Container -->
+  <main class="quiz-container">
+    <div class="quiz-card">
+
+      <!-- STEP 1: INTRO -->
+      <section id="stepIntro" class="step-view active">
+        <div style="text-align: center;">
+          <span class="badge badge-coral">60-Second Street Readiness Diagnostic</span>
+          <h2 class="step-title">Are You Paying the "Gringo Tax"? Test Your Street Spanish Score.</h2>
+          <p class="step-desc">
+            Find out how well you actually survive real-world Colombian & LatAm street interactions—plus unlock our free <strong>30-Word Nomad Street Guide PDF</strong>.
+          </p>
+
+          <div style="text-align: left; max-width: 440px; margin: 0 auto 28px;">
+            <label for="frustrationSelect" class="input-label">First: What's your #1 frustration right now?</label>
+            <select id="frustrationSelect" class="select-input">
+              <option value="Negotiating Rent & Landlords">Negotiating Rent & Landlords</option>
+              <option value="Dating & Nightlife Slang">Dating & Nightlife Slang</option>
+              <option value="Fast-Talking Taxis & Vendors">Fast-Talking Taxis & Street Vendors</option>
+              <option value="Freezing Up at Cafes & Socializing">Freezing Up at Cafes & Socializing</option>
+            </select>
+          </div>
+
+          <button type="button" id="startQuizBtn" class="btn-submit" style="max-width: 380px; margin: 0 auto;">
+            <span>Start the 60-Second Quiz &rarr;</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 2: QUIZ QUESTIONS -->
+      <section id="stepQuiz" class="step-view">
+        <div class="quiz-progress-header">
+          <span id="scenarioLabel">Scenario: Money & Taxis</span>
+          <span id="questionCounter">Question 1 of 4</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progressBarFill" class="progress-bar-fill" style="width: 25%;"></div>
+        </div>
+
+        <h3 id="questionText" class="question-title">
+          You hop in a taxi in Medellín and the driver says: 'Son cincuenta lucas, parce.' What is he asking for?
+        </h3>
+
+        <div id="optionsContainer" class="options-list">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- STEP 3: LEAD GATE FORM -->
+      <section id="stepGate" class="step-view">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <span class="badge badge-coral">Diagnostic Complete</span>
+          <h2 class="step-title" style="margin-top: 10px;">Your Street Survival Score Is Ready!</h2>
+          <p class="step-desc" style="margin-bottom: 0;">
+            Enter your email below to view your score breakdown and instantly unlock the <strong>30-Word Nomad Street Guide PDF</strong>.
+          </p>
+        </div>
+
+        <form id="leadForm" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label for="leadEmail" class="input-label">Your Email Address *</label>
+            <input type="email" id="leadEmail" required placeholder="you@nomadlife.com" class="text-input">
+          </div>
+
+          <div>
+            <label for="leadWhatsapp" class="input-label">WhatsApp Number (Optional, for voice-note tips)</label>
+            <input type="tel" id="leadWhatsapp" placeholder="+1 (555) 000-0000 or Colombian mobile" class="text-input">
+          </div>
+
+          <button type="submit" id="submitLeadBtn" class="btn-submit" style="margin-top: 8px;">
+            <span>Unlock My Score + Free 30-Word PDF &rarr;</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- STEP 4: RESULTS & RECOMMENDATIONS -->
+      <section id="stepResults" class="step-view">
+        <div class="results-score-box">
+          <span class="score-label">Your Street Spanish Score</span>
+          <div id="scoreDisplay" class="score-number">75 / 100</div>
+          <p id="scoreVerdict" class="score-verdict">
+            🔥 Solid Street Baseline: You know key slang, but native-speed curveballs and accent habits are still holding you back.
+          </p>
+          <a href="/nomad-street-guide.pdf" download="CalleNomad-Street-Guide.pdf" target="_blank" rel="noopener noreferrer" class="pdf-download-link">
+            <span>📥 Download Your Free 30-Word Nomad Street Guide (PDF)</span>
+          </a>
+        </div>
+
+        <div class="recommendations-grid">
+          <!-- Card 1: Free 20-Min Audit -->
+          <div class="rec-card rec-card-primary">
+            <div>
+              <span id="recBadge" class="rec-card-badge rec-badge-coral">Recommended for You</span>
+              <h4 class="rec-card-title">Free 20-Min 1-on-1 Fluency Audit</h4>
+              <p class="rec-card-desc">
+                Hop on Zoom with Benito. We'll diagnose where you freeze up and map out a custom 6-week street simulation plan.
+              </p>
+            </div>
+            <a id="auditCalLink" href="https://cal.com/callenomad/20min" target="_blank" rel="noopener noreferrer" class="rec-btn rec-btn-coral">
+              Book Free 20-Min Audit &rarr;
+            </a>
+          </div>
+
+          <!-- Card 2: $19 Audio Vault -->
+          <div class="rec-card rec-card-secondary">
+            <div>
+              <span class="rec-card-badge rec-badge-dark">Instant Self-Study ($19 USD)</span>
+              <h4 class="rec-card-title">The Anti-Gringo Tax Audio & Script Vault</h4>
+              <p class="rec-card-desc">
+                30 native-speed street audio clips + 5 copy-paste WhatsApp scripts for landlords, dates, and taxis. (100% credited if you join the Bootcamp later!)
+              </p>
+            </div>
+            <a id="stripeVaultLink" href="https://buy.stripe.com/YOUR_19_USD_LINK" target="_blank" rel="noopener noreferrer" class="rec-btn rec-btn-dark">
+              Grab the Audio Vault ($19) &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="quiz-footer">
+    <p>&copy; 2026 CalleNomad.com &bull; Practical Spanish for Digital Nomads &bull; <a href="/" style="text-decoration: underline;">Home</a></p>
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    (function() {
+      // Configuration Links
+      const WEBHOOK_URL = ""; // Optional: Paste your Make.com or Zapier webhook URL here
+      const STRIPE_19_VAULT_LINK = "https://buy.stripe.com/YOUR_19_USD_LINK"; // Replace with your Stripe payment link
+      const CAL_AUDIT_BASE_LINK = "https://cal.com/callenomad/20min";
+
+      const QUESTIONS = [
+        {
+          id: 1,
+          scenario: "Money & Taxis",
+          question: "You hop in a taxi in Medellín and the driver says: 'Son cincuenta lucas, parce.' What is he asking for?",
+          options: [
+            { text: "500 Pesos", points: 0 },
+            { text: "50,000 COP (approx. $12 USD)", points: 25 },
+            { text: "5,000 COP", points: 0 },
+            { text: "He's asking if your name is Lucas", points: 0 },
+          ],
+        },
+        {
+          id: 2,
+          scenario: "Street Smarts",
+          question: "A local friend tells you: 'No des papaya con el celular en esa cuadra.' What are they warning you not to do?",
+          options: [
+            { text: "Don't buy fruit from street vendors on that block", points: 0 },
+            { text: "Don't put yourself in an easy position to get your phone snatched", points: 25 },
+            { text: "Don't lose cell reception on that corner", points: 0 },
+            { text: "Don't forget to tip the delivery driver", points: 0 },
+          ],
+        },
+        {
+          id: 3,
+          scenario: "Social & Dating",
+          question: "Your date texts you on WhatsApp: 'Paila, estoy en un trancón horrible, llego ahorita.' What just happened?",
+          options: [
+            { text: "They are cancelling the date permanently", points: 0 },
+            { text: "Bad luck—they are stuck in a massive traffic jam and will arrive in 5 mins (or 2 hours)", points: 25 },
+            { text: "They are cooking paella and running late", points: 0 },
+            { text: "They are waiting for you at the train station", points: 0 },
+          ],
+        },
+        {
+          id: 4,
+          scenario: "Real-Time Pressure",
+          question: "Be honest: What happens when a waiter or landlord speaks to you at 1.5x native speed and goes off-script?",
+          options: [
+            { text: "I freeze, smile awkwardly, and say 'Sí, gracias' hoping for the best", points: 10 },
+            { text: "I try to translate word-for-word in my head using textbook grammar", points: 15 },
+            { text: "I catch the gist, but I sound robotic and get hit with the Gringo Tax", points: 20 },
+            { text: "I handle it smoothly with local slang and filler words", points: 25 },
+          ],
+        },
+      ];
+
+      // State
+      let currentQ = 0;
+      let score = 0;
+      let selectedPainPoint = "Negotiating Rent & Landlords";
+      let userEmail = "";
+
+      // DOM Elements
+      const stepIntro = document.getElementById('stepIntro');
+      const stepQuiz = document.getElementById('stepQuiz');
+      const stepGate = document.getElementById('stepGate');
+      const stepResults = document.getElementById('stepResults');
+
+      const frustrationSelect = document.getElementById('frustrationSelect');
+      const startQuizBtn = document.getElementById('startQuizBtn');
+
+      const scenarioLabel = document.getElementById('scenarioLabel');
+      const questionCounter = document.getElementById('questionCounter');
+      const progressBarFill = document.getElementById('progressBarFill');
+      const questionText = document.getElementById('questionText');
+      const optionsContainer = document.getElementById('optionsContainer');
+
+      const leadForm = document.getElementById('leadForm');
+      const leadEmail = document.getElementById('leadEmail');
+      const leadWhatsapp = document.getElementById('leadWhatsapp');
+      const submitLeadBtn = document.getElementById('submitLeadBtn');
+
+      const scoreDisplay = document.getElementById('scoreDisplay');
+      const scoreVerdict = document.getElementById('scoreVerdict');
+      const recBadge = document.getElementById('recBadge');
+      const auditCalLink = document.getElementById('auditCalLink');
+      const stripeVaultLink = document.getElementById('stripeVaultLink');
+
+      // Set Stripe link
+      if (stripeVaultLink && STRIPE_19_VAULT_LINK) {
+        stripeVaultLink.href = STRIPE_19_VAULT_LINK;
+      }
+
+      function showStep(stepEl) {
+        [stepIntro, stepQuiz, stepGate, stepResults].forEach(s => s.classList.remove('active'));
+        stepEl.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Step 1 -> Step 2
+      startQuizBtn.addEventListener('click', function() {
+        selectedPainPoint = frustrationSelect.value;
+        currentQ = 0;
+        score = 0;
+        renderQuestion();
+        showStep(stepQuiz);
+      });
+
+      function renderQuestion() {
+        const q = QUESTIONS[currentQ];
+        scenarioLabel.textContent = `Scenario: ${q.scenario}`;
+        questionCounter.textContent = `Question ${currentQ + 1} of ${QUESTIONS.length}`;
+        progressBarFill.style.width = `${((currentQ + 1) / QUESTIONS.length) * 100}%`;
+        questionText.textContent = q.question;
+
+        optionsContainer.innerHTML = '';
+        q.options.forEach(opt => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'option-btn';
+          btn.innerHTML = `<span>${opt.text}</span><span class="arrow-icon">&rarr;</span>`;
+          btn.addEventListener('click', () => handleAnswer(opt.points));
+          optionsContainer.appendChild(btn);
+        });
+      }
+
+      function handleAnswer(points) {
+        score += points;
+        if (currentQ + 1 < QUESTIONS.length) {
+          currentQ++;
+          renderQuestion();
+        } else {
+          showStep(stepGate);
+        }
+      }
+
+      // Step 3 -> Step 4
+      leadForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        userEmail = leadEmail.value.trim();
+        const userWhatsapp = leadWhatsapp.value.trim();
+
+        submitLeadBtn.disabled = true;
+        submitLeadBtn.innerHTML = '<span>Calculating Score...</span>';
+
+        const leadPayload = {
+          email: userEmail,
+          whatsapp: userWhatsapp,
+          painPoint: selectedPainPoint,
+          streetScore: score,
+          timestamp: new Date().toISOString()
+        };
+
+        // Non-blocking Webhook dispatch (if configured)
+        if (WEBHOOK_URL && WEBHOOK_URL.startsWith('http')) {
+          try {
+            await fetch(WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(leadPayload)
+            });
+          } catch (err) {
+            console.warn('Webhook dispatch failed (non-blocking):', err);
+          }
+        }
+
+        // Save locally as backup
+        try {
+          localStorage.setItem('callenomad_last_lead', JSON.stringify(leadPayload));
+        } catch (e) {}
+
+        // Populate Results
+        scoreDisplay.textContent = `${score} / 100`;
+        if (score < 60) {
+          scoreVerdict.textContent = "⚠️ High Gringo Tax Vulnerability: You know some basics, but fast street talkers and off-script situations leave you exposed.";
+        } else {
+          scoreVerdict.textContent = "🔥 Solid Street Baseline: You know key slang, but native-speed curveballs and accent habits are still holding you back.";
+        }
+
+        recBadge.textContent = `Recommended for ${selectedPainPoint}`;
+        auditCalLink.href = `${CAL_AUDIT_BASE_LINK}?email=${encodeURIComponent(userEmail)}`;
+
+        submitLeadBtn.disabled = false;
+        submitLeadBtn.innerHTML = '<span>Unlock My Score + Free 30-Word PDF &rarr;</span>';
+        showStep(stepResults);
+      });
+
+    })();
+  </script>
+</body>
+</html>
