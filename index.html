@@ -542,66 +542,135 @@ section { padding: 85px 0; }
   line-height: 1.45;
 }
 
-/* Coach Video Card */
-.coach-video-card {
-  margin-top: 32px;
-  background: var(--bg-card);
-  border: 1.5px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.coach-video-card:hover {
-  border-color: var(--border-medium);
-  box-shadow: var(--shadow-md);
-}
-
-.coach-video-header {
+/* Hero CTA Group & Secondary Video Button */
+.hero-cta-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  gap: 12px;
+  justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
-.coach-video-title {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-main);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.coach-video-badge {
+.hero-video-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  background: rgba(217, 78, 54, 0.1);
-  color: var(--brand-coral);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-radius: var(--radius-full);
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-dark);
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
 }
 
-.coach-video-wrapper {
+.hero-video-btn:hover {
+  background: var(--text-main);
+  color: #FFFFFF;
+  border-color: var(--text-main);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 34, 41, 0.12);
+}
+
+.hero-video-btn:active {
+  transform: translateY(0);
+}
+
+.hero-video-btn svg {
+  color: var(--brand-coral);
+  transition: transform var(--transition-fast);
+}
+
+.hero-video-btn:hover svg {
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Video Lightbox Modal */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.video-modal.is-active {
+  display: flex;
+  opacity: 1;
+}
+
+.video-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.video-modal-dialog {
   position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 860px;
+  background: #000000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-modal.is-active .video-modal-dialog {
+  transform: scale(1);
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.65);
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.video-modal-close:hover {
+  background: var(--brand-coral);
+  border-color: var(--brand-coral);
+  transform: rotate(90deg);
+}
+
+.video-modal-player-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
   background: #000000;
-  box-shadow: var(--shadow-sm);
 }
 
-.coach-video-element {
+.video-modal-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1412,10 +1481,16 @@ section { padding: 85px 0; }
         </p>
 
         <div class="cta-box">
-          <a href="https://cal.com/callenomad/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Book Free 20-Minute Fluency Audit</span>
-          </a>
+          <div class="hero-cta-group">
+            <a href="https://cal.com/callenomad/20min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Book Free 20-Minute Fluency Audit</span>
+            </a>
+            <button type="button" class="hero-video-btn" id="openVideoModalBtn" aria-label="Watch 45-Second Intro Video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Watch 45-Sec Intro</span>
+            </button>
+          </div>
           <div class="cta-microcopy">
             <span>✓ 100% Free Zoom Call</span>
             <span>•</span>
@@ -1482,19 +1557,7 @@ section { padding: 85px 0; }
               </div>
             </div>
 
-            <!-- Embedded Coach Video Card -->
-            <div class="coach-video-card">
-              <div class="coach-video-header">
-                <span class="coach-video-title">🎥 Hear Benito's Story & Pronunciation in 44 Seconds</span>
-                <span class="coach-video-badge">▶ 44-Sec Intro</span>
-              </div>
-              <div class="coach-video-wrapper">
-                <video class="coach-video-element" controls preload="metadata" playsinline poster="coach.jpg">
-                  <source src="coach-intro-720p.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -2024,6 +2087,7 @@ section { padding: 85px 0; }
       render();
       initAudio();
       initScrollReveal();
+      initVideoModal();
     }
 
     function initScrollReveal() {
@@ -2097,6 +2161,43 @@ section { padding: 85px 0; }
       });
     }
 
+    function initVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const openBtn = document.getElementById('openVideoModalBtn');
+      const closeBtn = document.getElementById('closeVideoModalBtn');
+      const backdrop = document.getElementById('videoModalBackdrop');
+      const video = document.getElementById('modalVideoPlayer');
+      if (!modal || !openBtn) return;
+
+      function open() {
+        modal.classList.add('is-active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(() => {});
+        }
+      }
+
+      function close() {
+        modal.classList.remove('is-active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (video) {
+          video.pause();
+        }
+      }
+
+      openBtn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      if (backdrop) backdrop.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+          close();
+        }
+      });
+    }
+
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
     } else {
@@ -2104,6 +2205,20 @@ section { padding: 85px 0; }
     }
   })();
   </script>
+
+  <!-- Video Lightbox Modal -->
+  <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Benito Intro Video">
+    <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+    <div class="video-modal-dialog">
+      <button type="button" class="video-modal-close" id="closeVideoModalBtn" aria-label="Close video modal">&times;</button>
+      <div class="video-modal-player-wrap">
+        <video class="video-modal-player" id="modalVideoPlayer" controls preload="none" playsinline poster="coach.jpg">
+          <source src="coach-intro-720p.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
 
   <!-- Floating WhatsApp Business Quick Contact Widget -->
   <a href="https://wa.me/573502176541?text=%C2%A1Hola%20Benito!%20I%27m%20interested%20in%20CalleNomad%201-on-1%20Spanish%20coaching.%20Could%20we%20chat%3F" 
