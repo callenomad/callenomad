@@ -542,6 +542,72 @@ section { padding: 85px 0; }
   line-height: 1.45;
 }
 
+/* Coach Video Card */
+.coach-video-card {
+  margin-top: 32px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.coach-video-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+.coach-video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.coach-video-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coach-video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(217, 78, 54, 0.1);
+  color: var(--brand-coral);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full);
+}
+
+.coach-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000000;
+  box-shadow: var(--shadow-sm);
+}
+
+.coach-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Financial ROI Section (The Gringo Tax) */
 .roi-section {
   background: var(--bg-surface);
@@ -1413,6 +1479,20 @@ section { padding: 85px 0; }
                   <strong>Clear Latin American Spanish</strong>
                   <p>Rooted in Colombia's famous conversational warmth and crystal-clear pronunciation.</p>
                 </div>
+              </div>
+            </div>
+
+            <!-- Embedded Coach Video Card -->
+            <div class="coach-video-card">
+              <div class="coach-video-header">
+                <span class="coach-video-title">🎥 Hear Benito's Story & Pronunciation in 44 Seconds</span>
+                <span class="coach-video-badge">▶ 44-Sec Intro</span>
+              </div>
+              <div class="coach-video-wrapper">
+                <video class="coach-video-element" controls preload="metadata" playsinline poster="coach.jpg">
+                  <source src="coach-intro-720p.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
