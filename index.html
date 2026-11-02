@@ -1011,6 +1011,166 @@ section { padding: 85px 0; }
   flex-shrink: 0;
 }
 
+/* Phrasebook Notion Vault Callout Banner */
+.phrasebook-vault-banner {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #1A1F26 0%, #242B35 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 36px;
+  align-items: center;
+  box-shadow: 0 16px 40px -10px rgba(26, 31, 38, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.phrasebook-vault-banner::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(217, 78, 54, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.vault-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(217, 78, 54, 0.18);
+  color: #FF8A73;
+  border: 1px solid rgba(217, 78, 54, 0.35);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.vault-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.vault-desc {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 640px;
+}
+
+.vault-features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+}
+
+.vault-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #E2E8F0;
+  line-height: 1.45;
+}
+
+.vault-feature-item svg {
+  flex-shrink: 0;
+  color: #FF8A73;
+  margin-top: 2px;
+}
+
+.vault-action-col {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vault-price-tag {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.vault-price-curr {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FF8A73;
+}
+
+.vault-price-num {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.vault-price-denom {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.vault-price-subtext {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  margin-bottom: 16px;
+}
+
+.vault-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--brand-coral);
+  color: #FFFFFF;
+  padding: 13px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(217, 78, 54, 0.35);
+}
+
+.vault-btn:hover {
+  background: var(--brand-coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(217, 78, 54, 0.45);
+  color: #FFFFFF;
+}
+
+.vault-guarantee-note {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #94A3B8;
+  line-height: 1.35;
+}
+
 /* Packages & Pricing */
 .packages-section {
   background: #FFFFFF;
@@ -1264,6 +1424,9 @@ section { padding: 85px 0; }
   .blueprint-timeline { grid-template-columns: 1fr; }
   .phrase-card { padding: 20px; }
   .phrase-breakdown-grid { grid-template-columns: 1fr; }
+  .phrasebook-vault-banner { grid-template-columns: 1fr; padding: 26px 20px; gap: 24px; }
+  .vault-features-list { grid-template-columns: 1fr; }
+  .vault-action-col { min-width: 100%; padding: 20px; }
   .guarantee-box { flex-direction: column; text-align: center; }
   .footer-content { flex-direction: column; }
   .footer-links-group { flex-direction: column; gap: 24px; }
@@ -1739,6 +1902,49 @@ section { padding: 85px 0; }
             </div>
           </div>
         </div>
+
+        <!-- Notion Vault Self-Study Callout Banner -->
+        <div class="phrasebook-vault-banner reveal-on-scroll">
+          <div class="vault-info-col">
+            <div class="vault-badge">⚡ Instant Self-Study Reference • Free Notion App</div>
+            <h3 class="vault-title">The Anti-Gringo Tax Audio & Script Vault</h3>
+            <p class="vault-desc">
+              Don't need 1-on-1 coaching yet, but want the full Latin American audio breakdowns and copy-paste WhatsApp negotiation scripts right on your phone? Get the complete Notion vault.
+            </p>
+            <div class="vault-features-list">
+              <div class="vault-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>30 native-speed audio clips:</strong> cafes, taxis, night outs & street markets</span>
+              </div>
+              <div class="vault-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>5 WhatsApp negotiation templates:</strong> rent direct from landlords & bypass app fees</span>
+              </div>
+              <div class="vault-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Offline in Notion:</strong> syncs seamlessly to your iOS or Android phone</span>
+              </div>
+              <div class="vault-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>100% Tuition Credit:</strong> 100% of your $19 is credited if you ever join 1-on-1 coaching</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vault-action-col">
+            <div class="vault-price-tag">
+              <span class="vault-price-curr">$</span>
+              <span class="vault-price-num">19</span>
+              <span class="vault-price-denom">USD</span>
+            </div>
+            <div class="vault-price-subtext">One-time purchase • Lifetime access</div>
+            <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" target="_blank" rel="noopener noreferrer" class="vault-btn">
+              <span>Get the Audio Vault</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <div class="vault-guarantee-note">Instant Notion template delivery via email</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1927,6 +2133,16 @@ section { padding: 85px 0; }
               <p>Life on the road is fluid, but consistency is key. We have a clear <strong>24-hour notice policy</strong> for all bookings, reschedules, and cancellations. As long as you notify me or adjust your time via Calendly at least 24 hours before our scheduled session, you can reschedule hassle-free without forfeiting your session.</p>
             </div>
           </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>What if I just want self-study materials without 1-on-1 coaching?</span>
+              <span class="faq-plus">+</span>
+            </button>
+            <div class="faq-a">
+              <p>You can grab <strong>The Anti-Gringo Tax Audio & Script Vault ($19 USD)</strong>. It gives you instant lifetime access to 30 native audio breakdowns and 5 plug-and-play WhatsApp negotiation scripts in Notion. If you ever decide to join our 1-on-1 coaching later, 100% of your $19 is automatically credited toward your tuition.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1959,6 +2175,7 @@ section { padding: 85px 0; }
           <a href="#roi">Why CalleNomad</a>
           <a href="#how-it-works">Method</a>
           <a href="#phrasebook">Phrasebook</a>
+          <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" target="_blank" rel="noopener noreferrer">Audio Vault ($19)</a>
           <a href="/quiz">Street Spanish Diagnostic ⚡</a>
           <a href="#packages">Pricing</a>
           <a href="#faq">FAQ</a>
