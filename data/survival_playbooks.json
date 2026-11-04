@@ -1,0 +1,662 @@
+[
+  {
+    "slug": "negotiate-rent-medellin-spanish",
+    "metaTitle": "How to Negotiate Rent in Medellín: The Anti-Gringo Tax Playbook",
+    "metaDescription": "Master real Paisa Spanish to negotiate monthly leases in El Poblado and Laureles. Avoid paying double with native scripts and audio breakdowns.",
+    "h1": "How to Negotiate Rent in Medellín: Stop Paying the Gringo Tax",
+    "city": "Medellín",
+    "cityBadge": "Medellín (El Poblado & Laureles)",
+    "readTime": "6 min read",
+    "updatedDate": "November 2026",
+    "introHook": "Arriving in Medellín and renting an apartment through Facebook groups or direct landlords often triggers an automatic 30-50% surcharge if you speak textbook tourist Spanish. Landlords immediately identify newcomers. When you use authentic Paisa phrasing and business etiquette, you signal local experience and command fair local pricing.",
+    "comparisonRows": [
+      {
+        "intent": "Asking for the best price / discount",
+        "textbook": "¿Tiene algún descuento?",
+        "calle": "¿Cuánto es lo menos por el mes?",
+        "nuance": "Direct yet culturally expected in Colombian market negotiation. Textbook Spanish sounds rigid and timid; Paisas respect a direct, polite counter."
+      },
+      {
+        "intent": "Confirming an agreed price or deal",
+        "textbook": "Estoy de acuerdo con el precio.",
+        "calle": "Listo parcero, me sirve. Cerremos de una.",
+        "nuance": "Demonstrates decisive Colombian casual confidence. Landlords prefer hassle-free tenants who confirm quickly."
+      },
+      {
+        "intent": "Asking if utilities (services) are included",
+        "textbook": "¿Los servicios públicos están incluidos?",
+        "calle": "¿Eso viene con servicios full o toca pagar aparte?",
+        "nuance": "Natural street phrasing distinguishing all-inclusive rent from variable monthly bills (EPM)."
+      },
+      {
+        "intent": "Inquiring about lease duration flexibility",
+        "textbook": "¿Puedo alquilar por tres meses?",
+        "calle": "La idea es quedarme tres meses firmes. ¿Cómo me lo deja por ese tiempo?",
+        "nuance": "Frames length of stay as negotiation leverage rather than asking for permission."
+      }
+    ],
+    "audioTasters": [
+      {
+        "file": "audios/Cuanto es lo menos.m4a",
+        "phrase": "¿Cuánto es lo menos?",
+        "translation": "What is your absolute bottom price?",
+        "breakdown": "The quintessential Colombian negotiation prompt used everywhere from monthly lease agreements to artisanal markets."
+      },
+      {
+        "file": "audios/Listo.m4a",
+        "phrase": "Listo",
+        "translation": "Done / All set / Understood",
+        "breakdown": "Universal Colombian confirmation that seals deals with friendly decisiveness."
+      }
+    ],
+    "miniQuiz": [
+      {
+        "question": "You are viewing an apartment in Laureles listed at 3.5M COP. How do you politely ask for the bottom price?",
+        "options": [
+          {
+            "text": "¿Cuánto es lo menos?",
+            "correct": true,
+            "feedback": "¡Exacto! It is the standard, respected Colombian negotiation phrase."
+          },
+          {
+            "text": "¿Me puede dar un descuento por favor?",
+            "correct": false,
+            "feedback": "Too formal and sounds like textbook Spanish, immediately marking you as a tourist."
+          },
+          {
+            "text": "Eso está muy caro, bájale.",
+            "correct": false,
+            "feedback": "Rude and aggressive — Colombians prioritize politeness even in negotiation."
+          }
+        ]
+      },
+      {
+        "question": "The landlord asks if you want to inspect the apartment today. How do you confirm enthusiastically?",
+        "options": [
+          {
+            "text": "Sí, deseo verlo hoy.",
+            "correct": false,
+            "feedback": "A bit robotic and bookish."
+          },
+          {
+            "text": "De una, a qué hora le queda bien.",
+            "correct": true,
+            "feedback": "Perfect! \"De una\" means \"right away / absolutely\" with native flair."
+          },
+          {
+            "text": "Quizás más tarde tal vez.",
+            "correct": false,
+            "feedback": "Indecisive and unnatural in everyday Colombian conversation."
+          }
+        ]
+      },
+      {
+        "question": "What does \"servicios incluidos\" typically cover in Medellín rentals?",
+        "options": [
+          {
+            "text": "Only water and electricity",
+            "correct": false,
+            "feedback": "Usually it includes gas and high-speed Wi-Fi as well."
+          },
+          {
+            "text": "Water, power, gas, and internet (EPM full)",
+            "correct": true,
+            "feedback": "Spot on! Full services include water, electricity, gas, and home Wi-Fi."
+          },
+          {
+            "text": "Cleaning and daily laundry service",
+            "correct": false,
+            "feedback": "Cleaning is almost always arranged separately."
+          }
+        ]
+      }
+    ],
+    "whatsappScripts": [
+      {
+        "title": "Initial Inquiry on Facebook Marketplace / Direct Owner",
+        "script": "¡Buenas tardes! Vi la publicación del apartamento en Laureles. Me interesa bastante. La idea es quedarme tres meses firmes desde el próximo lunes. ¿Cuánto es lo menos que me lo dejaría con servicios incluidos? Quedo atento, muchas gracias.",
+        "english": "Good afternoon! I saw your post for the apartment in Laureles. I am very interested. My plan is to stay three solid months starting next Monday. What is your bottom price with utilities included? Looking forward to hearing from you, thank you!"
+      },
+      {
+        "title": "Confirming Viewing Appointment",
+        "script": "¡Hola! Listo, me queda perfecto a las 4:00 PM hoy. ¿Me regala la dirección exacta y el número del apto? Allá llego puntual.",
+        "english": "Hello! Done, 4:00 PM today works perfectly for me. Could you share the exact address and apartment number? I will be there punctually."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is negotiating rent accepted culturally in Colombia?",
+        "answer": "Yes, especially for stays of 2 months or longer where landlords save on Airbnb fees and vacancies. Asking \"¿Cuánto es lo menos?\" politely is expected in private rentals."
+      },
+      {
+        "question": "Should I sign a written contract as a digital nomad?",
+        "answer": "Yes. Always ask for a simple bilingual contract specifying the monthly rate, included utilities (servicios), security deposit terms (depósito), and checkout date."
+      }
+    ]
+  },
+  {
+    "slug": "colombian-taxi-indrive-spanish-phrases",
+    "metaTitle": "Colombian Taxi & InDrive Spanish: Street Phrases & Safety Codes",
+    "metaDescription": "Navigate taxis, Uber, and InDrive across Bogotá and Medellín like a local. Master change requests, route directions, and safety codes in street Spanish.",
+    "h1": "Colombian Taxi & InDrive Survival: The Essential Street Guide",
+    "city": "Bogotá & Medellín",
+    "cityBadge": "Nationwide (Bogotá / Medellín / Cali)",
+    "readTime": "5 min read",
+    "updatedDate": "November 2026",
+    "introHook": "Getting into a yellow taxi or hailing an InDrive in Colombia can be stressful if you freeze up when the driver asks for route preferences or says they don't have change. Knowing the exact street phrases for cash exchange, turns, and pickup notes keeps rides smooth, safe, and priced fairly.",
+    "comparisonRows": [
+      {
+        "intent": "Asking if the driver has change for a 50k bill",
+        "textbook": "¿Tiene cambio para cincuenta mil pesos?",
+        "calle": "¿Tiene cambio o vuelto de cincuenta?",
+        "nuance": "In Colombia, \"vuelto\" is used universally alongside \"cambio\". Always confirm before boarding a street cab."
+      },
+      {
+        "intent": "Telling the driver to turn right at the corner",
+        "textbook": "Por favor gire a la derecha en la esquina.",
+        "calle": "Porfa coja la derecha en la esquina.",
+        "nuance": "\"Coger\" in Colombia is harmless everyday Spanish for \"to take (a route/turn)\", whereas in Argentina or Mexico it has vulgar connotations."
+      },
+      {
+        "intent": "Asking the driver to drop you off right here",
+        "textbook": "Deténgase aquí, por favor.",
+        "calle": "Me sirve por acá, muchas gracias.",
+        "nuance": "Very polite and natural Colombian phrasing that sounds warm rather than demanding."
+      },
+      {
+        "intent": "Warning someone to stay alert / watch out",
+        "textbook": "Tenga cuidado.",
+        "calle": "Pilas pues, ojo con el trancón.",
+        "nuance": "\"Pilas\" is Colombia's most common alert word for staying sharp and aware."
+      }
+    ],
+    "audioTasters": [
+      {
+        "file": "audios/Cambio:vuelto.m4a",
+        "phrase": "Cambio / Vuelto",
+        "translation": "Change (money returned)",
+        "breakdown": "Essential vocabulary before entering yellow taxis, where drivers often claim to carry no small change."
+      },
+      {
+        "file": "audios/Pilas.m4a",
+        "phrase": "Pilas",
+        "translation": "Stay sharp / Heads up / Be alert",
+        "breakdown": "Iconic Colombian warning to pay attention to your surroundings and belongings."
+      }
+    ],
+    "miniQuiz": [
+      {
+        "question": "Before closing the taxi door in Bogotá with a 50k COP bill, what should you ask?",
+        "options": [
+          {
+            "text": "¿Tiene vuelto de 50 mil?",
+            "correct": true,
+            "feedback": "Correct! Always ask before the ride starts to prevent driver change excuses later."
+          },
+          {
+            "text": "¿Acepta tarjeta de crédito gringa?",
+            "correct": false,
+            "feedback": "Most yellow cabs do not accept foreign credit cards."
+          },
+          {
+            "text": "¿Cuánto cuesta el viaje en dólares?",
+            "correct": false,
+            "feedback": "Taxi drivers operate strictly in Colombian Pesos."
+          }
+        ]
+      },
+      {
+        "question": "How do you tell an Uber/InDrive driver to drop you off right by the bakery?",
+        "options": [
+          {
+            "text": "Porfa déjeme acá al lado de la panadería.",
+            "correct": true,
+            "feedback": "Spot on! Natural, clear, and courteous."
+          },
+          {
+            "text": "¡Pare el carro inmediatamente!",
+            "correct": false,
+            "feedback": "Way too aggressive."
+          },
+          {
+            "text": "Yo saldré del automóvil.",
+            "correct": false,
+            "feedback": "Stiff and grammatical textbook phrasing."
+          }
+        ]
+      },
+      {
+        "question": "What does \"trancón\" mean in Colombian street Spanish?",
+        "options": [
+          {
+            "text": "Heavy traffic jam",
+            "correct": true,
+            "feedback": "Exacto! \"Trancón\" is the universal Colombian word for gridlock traffic."
+          },
+          {
+            "text": "Pothole in the road",
+            "correct": false,
+            "feedback": "A pothole is a \"hueco\"."
+          },
+          {
+            "text": "Speed bump",
+            "correct": false,
+            "feedback": "A speed bump is a \"resalto\" or \"policía acostado\"."
+          }
+        ]
+      }
+    ],
+    "whatsappScripts": [
+      {
+        "title": "InDrive / Uber Pickup Note",
+        "script": "¡Hola! Ya estoy afuera frente a la portería del edificio. Llevo chaqueta negra. Pilas con el trancón de la esquina.",
+        "english": "Hi! I am already outside in front of the building reception. Wearing a black jacket. Watch out for the traffic jam on the corner."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are yellow taxis safe in Colombia?",
+        "answer": "In Medellín and smaller cities they are generally safe and metered. In Bogotá, hailing off the street at night is discouraged; using apps like InDrive, Uber, or Cabify is safer and records the route."
+      },
+      {
+        "question": "What should I do if a driver claims to have no change?",
+        "answer": "Offer to stop at a local tienda or oxxo to break the bill, or use Daviplata/Nequi if you have access to local digital payment."
+      }
+    ]
+  },
+  {
+    "slug": "dating-whatsapp-slang-colombia",
+    "metaTitle": "Colombian Dating & WhatsApp Slang: Flirting Phrases for Expats",
+    "metaDescription": "Decode Colombian WhatsApp flirting, dating culture, and text slang. Real examples from Medellín and Bogotá with native audio.",
+    "h1": "Colombian Dating & WhatsApp Spanish: How to Chat Like a Local",
+    "city": "Medellín & Bogotá",
+    "cityBadge": "Medellín / Bogotá",
+    "readTime": "7 min read",
+    "updatedDate": "November 2026",
+    "introHook": "Dating in Colombia has its own rhythm and unspoken digital etiquette. If you text like a formal Google Translate user, conversations dry up quickly. Learning casual greetings, voice-note culture, and playful banter helps you connect authentically and avoid cultural misunderstandings.",
+    "comparisonRows": [
+      {
+        "intent": "Casual opening greeting on WhatsApp",
+        "textbook": "Hola, ¿cómo estás hoy?",
+        "calle": "¡Hola! ¿Qué más? ¿Qué cuenta?",
+        "nuance": "\"¿Qué más?\" is the warmest, most ubiquitous casual greeting in Colombian texting."
+      },
+      {
+        "intent": "Inviting someone out for a drink or coffee",
+        "textbook": "¿Le gustaría salir a tomar algo conmigo?",
+        "calle": "Armemos plan para tomarnos algo esta semana, ¿qué dice?",
+        "nuance": "\"Armar plan\" makes the invitation low-pressure and socially dynamic."
+      },
+      {
+        "intent": "Saying you had a great time after a date",
+        "textbook": "Disfruté mucho nuestra cita esta noche.",
+        "calle": "La pasé súper bien contigo, qué buen parche.",
+        "nuance": "\"Parche\" is the golden Colombian word for hangout, group, or fun vibe."
+      },
+      {
+        "intent": "Flirting or teasing playfully",
+        "textbook": "Me pareces muy atractivo/a.",
+        "calle": "Mucho estilo, me cayó súper bien tu energía.",
+        "nuance": "Complimenting energy and presence is much more charming than blunt physical compliments."
+      }
+    ],
+    "audioTasters": [
+      {
+        "file": "audios/Que onda.m4a",
+        "phrase": "¿Qué onda?",
+        "translation": "What's up? / How's it going?",
+        "breakdown": "Informal greeting understood across Latin America, often used casually between young people."
+      },
+      {
+        "file": "audios/Ligar.m4a",
+        "phrase": "Ligar",
+        "translation": "To flirt / Hook up / Hit on someone",
+        "breakdown": "Common verb for the dating game and romantic courtship."
+      }
+    ],
+    "miniQuiz": [
+      {
+        "question": "Your Colombian match texts you \"¿Qué más pues?\". What is the best natural reply?",
+        "options": [
+          {
+            "text": "¡Bien! Acá relajado en casa, ¿y usted qué hace?",
+            "correct": true,
+            "feedback": "Natural and invites conversational flow."
+          },
+          {
+            "text": "Estoy en perfecto estado de salud, gracias.",
+            "correct": false,
+            "feedback": "Way too literal and clinical."
+          },
+          {
+            "text": "No entiendo su pregunta gramatical.",
+            "correct": false,
+            "feedback": "A surefire conversation killer!"
+          }
+        ]
+      },
+      {
+        "question": "What does \"armar plan\" mean in Colombian dating culture?",
+        "options": [
+          {
+            "text": "To put together a casual hangout or date",
+            "correct": true,
+            "feedback": "¡Eso es! Making plans to hang out."
+          },
+          {
+            "text": "To sign a prenuptial agreement",
+            "correct": false,
+            "feedback": "Definitely not!"
+          },
+          {
+            "text": "To cancel an existing appointment",
+            "correct": false,
+            "feedback": "Canceling is \"cancelar\" or \"sacar el cuerpo\"."
+          }
+        ]
+      },
+      {
+        "question": "How do Colombians commonly communicate on WhatsApp compared to text messages?",
+        "options": [
+          {
+            "text": "Voice notes (notas de voz) are extremely common and expected",
+            "correct": true,
+            "feedback": "Spot on! Audio voice notes are the primary communication mode."
+          },
+          {
+            "text": "They only send SMS text messages",
+            "correct": false,
+            "feedback": "Almost nobody uses regular SMS in Colombia."
+          },
+          {
+            "text": "Voice notes are considered very rude",
+            "correct": false,
+            "feedback": "On the contrary, warmth is expressed through voice."
+          }
+        ]
+      }
+    ],
+    "whatsappScripts": [
+      {
+        "title": "Low-Pressure Date Invitation",
+        "script": "¡Hola! Me gustó mucho tu vibra. ¿Qué tal si armamos plan para un café o un vino este jueves? Conozco un sitio chévere en Provenza.",
+        "english": "Hey! Really liked your vibe. How about we put together a plan for coffee or wine this Thursday? I know a cool spot in Provenza."
+      },
+      {
+        "title": "Post-Date Text Follow-up",
+        "script": "¡Hola! La pasé genial hoy, me reí un montón. Avísame cuando llegues a casa para saber que estás bien. ¡Descansa!",
+        "english": "Hey! Had a great time today, laughed so much. Let me know when you get home so I know you got back safe. Rest up!"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is it acceptable to send voice notes early on?",
+        "answer": "Yes! Colombians love voice notes (notas de voz). It builds trust, shows warmth, and proves you are real."
+      },
+      {
+        "question": "What is the biggest red flag in Colombian dating apps for foreigners?",
+        "answer": "Matches who immediately suggest private luxury apartments or ask to bring outside drinks. Always meet in busy public venues in daylight or lively public restaurants."
+      }
+    ]
+  },
+  {
+    "slug": "order-coffee-tinto-medellin-bogota",
+    "metaTitle": "How to Order Coffee in Colombia: Tinto vs Specialty Cafes",
+    "metaDescription": "Learn how to order coffee in Colombia like a connoisseur. Navigate street tintos, panaderías, and specialty roasters without confusion.",
+    "h1": "How to Order Coffee in Colombia: Street Tinto to Third-Wave Roasters",
+    "city": "Medellín & Bogotá",
+    "cityBadge": "Medellín / Bogotá / Coffee Triangle",
+    "readTime": "5 min read",
+    "updatedDate": "November 2026",
+    "introHook": "Colombia produces world-class Arabica coffee, but walking into a local neighborhood panadería versus a third-wave cafe in Laureles or Chapinero requires totally different vocabulary. Ordering a \"café grande\" will get you confused stares. Here is the exact vocabulary to get the perfect cup every single time.",
+    "comparisonRows": [
+      {
+        "intent": "Ordering a black street drip coffee",
+        "textbook": "Un café negro, por favor.",
+        "calle": "Me regala un tintico campesino, porfa.",
+        "nuance": "\"Regalar\" (literally to gift) is Colombia's most beloved polite request formula. A \"tintico campesino\" is sweetened with panela (cane sugar)."
+      },
+      {
+        "intent": "Ordering coffee with milk",
+        "textbook": "Un café con leche.",
+        "calle": "Un perico (en Bogotá) o un pintado (en Medellín).",
+        "nuance": "Regional terminology: Bogotá uses \"perico\" for small milk coffee (watch out: elsewhere perico means scrambled eggs or slang for cocaine!), while Medellín says \"pintado\"."
+      },
+      {
+        "intent": "Asking for no sugar in your coffee",
+        "textbook": "Sin azúcar, por favor.",
+        "calle": "Sin dulce, amargo porfa.",
+        "nuance": "Street coffee is default-sweetened; specifying \"sin dulce\" ensures you get unsweetened black coffee."
+      },
+      {
+        "intent": "Agreeing enthusiastically to a coffee invite",
+        "textbook": "Sí, me gustaría ir.",
+        "calle": "¡De una! Vamos ya mismo.",
+        "nuance": "\"De una\" is the ultimate spontaneous affirmation in Colombian culture."
+      }
+    ],
+    "audioTasters": [
+      {
+        "file": "audios/Ahorita.m4a",
+        "phrase": "Ahorita",
+        "translation": "In a little bit / Right now / Later (flexible time)",
+        "breakdown": "The notoriously ambiguous Latin American time frame: can mean in 5 minutes or never."
+      },
+      {
+        "file": "audios/De una.m4a",
+        "phrase": "De una",
+        "translation": "Right away / Absolutely / Let's do it",
+        "breakdown": "The most energetic and decisive Colombian response when agreeing to plans."
+      }
+    ],
+    "miniQuiz": [
+      {
+        "question": "How do you ask for a small black coffee at a street cart in Medellín?",
+        "options": [
+          {
+            "text": "¿Me regala un tintico, porfa?",
+            "correct": true,
+            "feedback": "¡Perfecto! Warm, natural, and instantly understood by every street vendor."
+          },
+          {
+            "text": "Quiero un café americano en vaso de papel.",
+            "correct": false,
+            "feedback": "Too formal and Americanized for street vendors."
+          },
+          {
+            "text": "Dame una taza de cafeína.",
+            "correct": false,
+            "feedback": "Sounds like a bad movie translation."
+          }
+        ]
+      },
+      {
+        "question": "In a traditional bakery in Bogotá, what does \"un perico\" mean when ordering drinks?",
+        "options": [
+          {
+            "text": "A small coffee with a splash of hot milk",
+            "correct": true,
+            "feedback": "Correct! In Bogotá, un perico is coffee with milk."
+          },
+          {
+            "text": "An iced latte with caramel",
+            "correct": false,
+            "feedback": "Incorrect — traditional bakeries don't do flavored syrups."
+          },
+          {
+            "text": "A parrot brought to your table",
+            "correct": false,
+            "feedback": "Literal Spanish meaning, but not the culinary term!"
+          }
+        ]
+      },
+      {
+        "question": "What does \"¿Me regala...?\" literally mean vs. how it is actually used?",
+        "options": [
+          {
+            "text": "Literally \"gift me\", but culturally means a polite \"could I please have...\"",
+            "correct": true,
+            "feedback": "Spot on! You still pay full price; it's just maximum Colombian courtesy."
+          },
+          {
+            "text": "You are asking for free food and charity",
+            "correct": false,
+            "feedback": "Not at all! It is standard commercial politeness."
+          },
+          {
+            "text": "It is an insult to the shopkeeper",
+            "correct": false,
+            "feedback": "The exact opposite — it's considered very respectful."
+          }
+        ]
+      }
+    ],
+    "whatsappScripts": [
+      {
+        "title": "Meeting a Colleague for Work & Coffee",
+        "script": "¡Buenas! ¿Te queda bien si nos vemos en Pergamino de Vía Primavera a las 3:00 PM para tomarnos un café y adelantar lo del proyecto? Avísame si te sirve.",
+        "english": "Hey! Does it work for you if we meet at Pergamino on Vía Primavera at 3:00 PM for coffee and catch up on the project? Let me know if that works."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why is traditional street tinto often very sweet?",
+        "answer": "Historically, top-grade Colombian beans were exported, leaving lower grade \"pasilla\" for domestic consumption, which was heavily roasted and sweetened with panela to balance bitterness. Today, specialty cafes serve unadulterated high-altitude beans."
+      },
+      {
+        "question": "Is tipping required in Colombian coffee shops?",
+        "answer": "At street carts and basic bakeries, tipping is not expected (you can leave small loose coins). In specialty cafes and seated restaurants, you will be asked \"¿Desea incluir el servicio?\" (standard 10%)."
+      }
+    ]
+  },
+  {
+    "slug": "what-does-dar-papaya-lucas-mean",
+    "metaTitle": "What Does \"Dar Papaya\" and \"Lucas\" Mean in Colombia? Slang Decoded",
+    "metaDescription": "Understand iconic Colombian street slang: \"No dar papaya\", \"lucas\", \"plata\", \"parce\", and avoid safety blunders in Medellín and Bogotá.",
+    "h1": "Colombian Slang Decoded: \"Dar Papaya\", \"Lucas\", and Street Safety Rules",
+    "city": "Colombia",
+    "cityBadge": "Nationwide Cultural Codes",
+    "readTime": "6 min read",
+    "updatedDate": "November 2026",
+    "introHook": "Every expat in Colombia hears the phrase \"No dar papaya\" within 48 hours of landing. But street Spanish goes far beyond fruit metaphors: money has its own secret dialect (\"lucas\", \"barras\", \"plata\"), and understanding street slang is the difference between blending in smoothly and standing out as an easy target.",
+    "comparisonRows": [
+      {
+        "intent": "Referring to money / cash",
+        "textbook": "Dinero / Efectivo",
+        "calle": "Plata / Lucas",
+        "nuance": "Nobody says \"dinero\" on the street. \"Plata\" is money in general; \"lucas\" means thousands of pesos (e.g., 20 lucas = 20,000 COP)."
+      },
+      {
+        "intent": "Safety advice: do not make yourself an easy target",
+        "textbook": "Sea prudente y no muestre objetos de valor.",
+        "calle": "No dé papaya, guarde el celular.",
+        "nuance": "\"Dar papaya\" means creating an unnecessary vulnerability that invites trouble or theft."
+      },
+      {
+        "intent": "Saying something is very cheap or expensive",
+        "textbook": "Esto es muy económico / costoso.",
+        "calle": "Está regalado / Está carísimo.",
+        "nuance": "\"Regalado\" implies it costs practically nothing; \"un ojo de la cara\" means an arm and a leg."
+      },
+      {
+        "intent": "Calling someone a friend or buddy",
+        "textbook": "Amigo / Compañero",
+        "calle": "Parce / Parcero",
+        "nuance": "The defining Paisa term of endearment, now used across Colombia by all age groups."
+      }
+    ],
+    "audioTasters": [
+      {
+        "file": "audios/Lucas.m4a",
+        "phrase": "Lucas",
+        "translation": "Thousands of pesos (Cash)",
+        "breakdown": "Slang currency unit where 1 luca = 1,000 Colombian pesos (e.g. \"50 lucas\" = 50,000 COP)."
+      },
+      {
+        "file": "audios/Plata.m4a",
+        "phrase": "Plata",
+        "translation": "Money / Cash (literally \"Silver\")",
+        "breakdown": "The universally preferred Latin American term for money in everyday conversation."
+      }
+    ],
+    "miniQuiz": [
+      {
+        "question": "If a friend tells you \"Esa camiseta cuesta 50 lucas\", how much is it?",
+        "options": [
+          {
+            "text": "50,000 Colombian Pesos (approx. -13 USD)",
+            "correct": true,
+            "feedback": "Exacto! 1 luca = 1,000 pesos."
+          },
+          {
+            "text": "500,000 Colombian Pesos",
+            "correct": false,
+            "feedback": "That would be 500 lucas!"
+          },
+          {
+            "text": "50 US Dollars",
+            "correct": false,
+            "feedback": "Lucas refers strictly to Colombian Pesos."
+          }
+        ]
+      },
+      {
+        "question": "What constitutes \"dar papaya\" while walking through a city center in Colombia?",
+        "options": [
+          {
+            "text": "Walking with your latest iPhone in your hand while staring down at maps",
+            "correct": true,
+            "feedback": "Spot on. This presents an easy target for opportunistic grab-and-dash."
+          },
+          {
+            "text": "Eating tropical fruit at a juice stand",
+            "correct": false,
+            "feedback": "Literal papaya is totally fine to enjoy!"
+          },
+          {
+            "text": "Politely greeting your neighbors in the elevator",
+            "correct": false,
+            "feedback": "That is just standard Colombian courtesy."
+          }
+        ]
+      },
+      {
+        "question": "What is the counterpart to \"dar papaya\" when someone takes advantage of an opening?",
+        "options": [
+          {
+            "text": "Papaya puesta, papaya partida",
+            "correct": true,
+            "feedback": "¡Eso es! The full saying means \"If papaya is served, papaya will be eaten\"."
+          },
+          {
+            "text": "La fruta madura se cae sola",
+            "correct": false,
+            "feedback": "Poetic, but not the Colombian street proverb."
+          },
+          {
+            "text": "No hay mal que por bien no venga",
+            "correct": false,
+            "feedback": "General Spanish idiom, not street safety code."
+          }
+        ]
+      }
+    ],
+    "whatsappScripts": [
+      {
+        "title": "Splitting a Dinner Bill with Friends",
+        "script": "¡Parceros! La cuenta total dio 120 lucas entre los cuatro, o sea 30 lucas por cabeza. ¿Me transfieren por Nequi o pasan la plata en efectivo?",
+        "english": "Friends! The total bill was 120k between the four of us, so 30k per person. Will you transfer via Nequi or pass cash?"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is \"parce\" acceptable to use with strangers?",
+        "answer": "Use \"parce\" with peers, taxi drivers, bartenders, and friends your age. With elderly people, police, or formal business settings, stick to \"señor/señora\" or \"usted\"."
+      },
+      {
+        "question": "Does \"No dar papaya\" mean Colombia is unsafe?",
+        "answer": "Colombia has vibrant, welcoming cities, but property theft is opportunistic. \"No dar papaya\" simply means using common street sense: keep your phone tucked away on crowded streets, don't flash expensive jewelry, and use registered ride apps at night."
+      }
+    ]
+  }
+]
