@@ -195,7 +195,45 @@ def test_hub_template():
     print("PASS: Hub template successfully validated!")
 
 
+def test_build_outputs():
+    survival_dir = BASE_DIR / "survival"
+    hub_file = survival_dir / "index.html"
+    print(f"Testing generated hub output at: {hub_file}")
+    assert hub_file.exists(), f"Generated hub does not exist: {hub_file}"
+
+    with open(hub_file, "r", encoding="utf-8") as f:
+        hub_html = f.read()
+    assert "{{" not in hub_html, f"Unrendered placeholder found in {hub_file}"
+
+    for slug in EXPECTED_SLUGS:
+        slug_file = survival_dir / slug / "index.html"
+        assert slug_file.exists(), f"Generated playbook does not exist: {slug_file}"
+        with open(slug_file, "r", encoding="utf-8") as f:
+            slug_html = f.read()
+        assert "{{" not in slug_html, f"Unrendered placeholder found in {slug_file}"
+        assert slug in slug_html, f"Slug missing from canonical/links in {slug_file}"
+
+    sitemap_file = BASE_DIR / "sitemap.xml"
+    print(f"Testing sitemap at: {sitemap_file}")
+    assert sitemap_file.exists(), f"sitemap.xml does not exist: {sitemap_file}"
+    with open(sitemap_file, "r", encoding="utf-8") as f:
+        sitemap_content = f.read()
+    assert "https://callenomad.com/survival/" in sitemap_content
+    for slug in EXPECTED_SLUGS:
+        assert f"https://callenomad.com/survival/{slug}/" in sitemap_content
+
+    robots_file = BASE_DIR / "robots.txt"
+    print(f"Testing robots.txt at: {robots_file}")
+    assert robots_file.exists(), f"robots.txt does not exist: {robots_file}"
+    with open(robots_file, "r", encoding="utf-8") as f:
+        robots_content = f.read()
+    assert "Sitemap: https://callenomad.com/sitemap.xml" in robots_content
+
+    print("PASS: All build outputs, sitemap, and robots.txt successfully validated!")
+
+
 if __name__ == "__main__":
     test_manifest()
     test_guide_template()
     test_hub_template()
+    test_build_outputs()
