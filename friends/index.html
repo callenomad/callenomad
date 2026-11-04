@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends & Family Spanish Coaching | CalleNomad</title>
+  
+  <!-- Explicitly prevent search engines from crawling or indexing this hidden private page -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --bg-page: #FCFBFA;
+  --bg-surface: #F4F1EA;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #EDE8DF;
+  --border-light: #E7E2D8;
+  --border-medium: #D9D2C5;
+  --border-dark: #1E2229;
+
+  --text-main: #1E2229;
+  --text-secondary: #4A4F58;
+  --text-muted: #717885;
+
+  --brand-coral: #D94E36;
+  --brand-coral-hover: #C23F28;
+  --brand-coral-light: rgba(217, 78, 54, 0.08);
+  --brand-green: #1E6F5C;
+  --brand-green-light: rgba(30, 111, 92, 0.08);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-featured: 0 12px 36px rgba(217, 78, 54, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+.private-header {
+  border-bottom: 1px solid var(--border-light);
+  background: rgba(252, 251, 250, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.logo-accent {
+  color: var(--brand-coral);
+}
+
+.private-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+/* Page Container */
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* Hero */
+.hero-box {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.75rem;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--brand-coral-light);
+  color: var(--brand-coral);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.15rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Currency Toggle */
+.currency-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.25rem 0 3rem;
+}
+
+.currency-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.currency-switch-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  display: inline-flex;
+}
+
+.currency-btn {
+  border: none;
+  background: transparent;
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.currency-btn.active {
+  background: var(--brand-coral);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Pricing Grid */
+.packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .packages-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.package-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.package-card:hover {
+  transform: translateY(-3px);
+}
+
+.package-card.featured {
+  border: 2px solid var(--brand-coral);
+  box-shadow: var(--shadow-featured);
+}
+
+.featured-pill {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-coral);
+  color: #FFFFFF;
+  font-size: 0.725rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(217, 78, 54, 0.3);
+}
+
+.pkg-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.pkg-description {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.price-curr {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+}
+
+.price-denom {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.price-subtext {
+  font-size: 0.85rem;
+  color: var(--brand-green);
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pkg-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+  flex-grow: 1;
+}
+
+.pkg-features li {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.45;
+}
+
+.pkg-features .check {
+  color: var(--brand-green);
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cta-btn-primary {
+  background: var(--brand-coral);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(217, 78, 54, 0.25);
+}
+
+.cta-btn-primary:hover {
+  background: var(--brand-coral-hover);
+  transform: translateY(-1px);
+}
+
+.cta-btn-outline {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-main) !important;
+}
+
+.cta-btn-outline:hover {
+  background: var(--bg-subtle);
+  border-color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+/* Info Box */
+.info-banner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.info-banner h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.info-item p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Footer */
+.private-footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="private-header">
+    <div class="header-container">
+      <a href="/" class="logo-group">
+        <span>Calle<span class="logo-accent">Nomad</span></span>
+      </a>
+      <div class="private-badge-pill">
+        <span>🔒</span> Friends & Family Rate
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-container">
+    <div class="hero-box">
+      <div class="hero-tag">❤️ Inner Circle Invitation</div>
+      <h1 class="hero-title">Friends & Family Spanish Coaching</h1>
+      <p class="hero-subtitle">
+        Private 1-on-1 street Spanish coaching tailored directly to your life, travel, and goals. 
+        50-minute private sessions taught by Benito at our inner-circle community rate.
+      </p>
+    </div>
+
+    <!-- Currency Switcher -->
+    <div class="currency-toggle-wrapper">
+      <span class="currency-label">Select currency:</span>
+      <div class="currency-switch-box">
+        <button type="button" class="currency-btn active" id="btnGbp" onclick="setCurrency('gbp')">
+          <span>🇬🇧</span> GBP (£)
+        </button>
+        <button type="button" class="currency-btn" id="btnUsd" onclick="setCurrency('usd')">
+          <span>🇺🇸</span> USD ($)
+        </button>
+      </div>
+    </div>
+
+    <!-- Pricing Packages -->
+    <div class="packages-grid">
+      <!-- 4 Lessons Card -->
+      <div class="package-card">
+        <div>
+          <h2 class="pkg-title">4 Lessons</h2>
+          <p class="pkg-description">The quick-start foundation. Perfect for immediate travel essentials, confidence boosting, and core everyday survival phrases.</p>
+          
+          <div class="price-row">
+            <span class="price-curr" id="p4Curr">£</span>
+            <span class="price-amount" id="p4Amount">100</span>
+            <span class="price-denom" id="p4Denom">GBP</span>
+          </div>
+          <div class="price-subtext" id="p4Subtext">
+            <span>✓</span> Just £25 per 50-minute session
+          </div>
+
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> <strong>4 Private 1-on-1 sessions</strong> (50 minutes each)</li>
+            <li><span class="check">✓</span> Customized to your immediate speaking gaps and travel plans</li>
+            <li><span class="check">✓</span> <strong>WhatsApp voice note support</strong> between lessons for real-time feedback</li>
+            <li><span class="check">✓</span> High-yield street Spanish cheat sheet on your phone</li>
+            <li><span class="check">✓</span> <strong>Flexible booking:</strong> reschedule easily with 24 hours notice</li>
+            <li><span class="check">✓</span> <strong>Zero expiration:</strong> use your sessions whenever you need them</li>
+          </ul>
+        </div>
+
+        <a id="btn4Lessons" href="https://wa.me/573502176541?text=Hey%20Benito!%20I%27d%20love%20to%20grab%20the%204-lesson%20Friends%20%26%20Family%20package%20(%C2%A3100).%20Let%27s%20set%20it%20up!" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-outline">
+          <span>💬</span> Claim 4 Lessons via WhatsApp
+        </a>
+      </div>
+
+      <!-- 10 Lessons Card (Featured) -->
+      <div class="package-card featured">
+        <div class="featured-pill">⭐ Best Value • Most Popular</div>
+        <div>
+          <h2 class="pkg-title">10 Lessons</h2>
+          <p class="pkg-description">The full conversational immersion. Move beyond memorizing phrases to thinking, joking, and conversing naturally in authentic Spanish.</p>
+          
+          <div class="price-row">
+            <span class="price-curr" id="p10Curr">£</span>
+            <span class="price-amount" id="p10Amount">220</span>
+            <span class="price-denom" id="p10Denom">GBP</span>
+          </div>
+          <div class="price-subtext" id="p10Subtext">
+            <span>✓</span> Best value — just £22 per 50-minute session
+          </div>
+
+          <ul class="pkg-features">
+            <li><span class="check">✓</span> <strong>10 Private 1-on-1 sessions</strong> (50 minutes each)</li>
+            <li><span class="check">✓</span> Deep street conversational fluency & active listening training</li>
+            <li><span class="check">✓</span> <strong>Unlimited WhatsApp voice coaching</strong> for pronunciation & slang</li>
+            <li><span class="check">✓</span> Real-world roleplay: cafe banter, taxi navigation, landlord negotiations</li>
+            <li><span class="check">✓</span> Personalized curriculum adapted to your work and interests</li>
+            <li><span class="check">✓</span> <strong>Priority scheduling</strong> with flexible booking calendar</li>
+            <li><span class="check">✓</span> <strong>Zero expiration:</strong> learn at whatever pace suits you</li>
+          </ul>
+        </div>
+
+        <a id="btn10Lessons" href="https://wa.me/573502176541?text=Hey%20Benito!%20I%27d%20love%20to%20grab%20the%2010-lesson%20Friends%20%26%20Family%20package%20(%C2%A3220).%20Let%27s%20set%20it%20up!" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+          <span>💬</span> Claim 10 Lessons via WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- How It Works & Payment Info -->
+    <div class="info-banner">
+      <h3><span>💡</span> How It Works</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <h4>1. Message to Claim</h4>
+          <p>Tap either button above to shoot Benito a quick WhatsApp message to lock in your private rate.</p>
+        </div>
+        <div class="info-item">
+          <h4>2. Simple Payment</h4>
+          <p>Pay easily via UK Bank Transfer, Monzo, Revolut, or Credit/Debit card in GBP or USD.</p>
+        </div>
+        <div class="info-item">
+          <h4>3. Book Your Times</h4>
+          <p>Receive your private Cal.com calendar link to pick slots that fit your weekly schedule perfectly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Private Footer -->
+    <footer class="private-footer">
+      <p>CalleNomad Private Friends & Family Rate • Not for public distribution.</p>
+      <p style="margin-top: 0.35rem;">Questions? Text Benito directly on WhatsApp at <a href="https://wa.me/573502176541" style="text-decoration: underline;">+57 350 217 6541</a>.</p>
+    </footer>
+  </main>
+
+  <script>
+    var currentCurrency = 'gbp';
+
+    function setCurrency(curr) {
+      currentCurrency = curr;
+      var btnGbp = document.getElementById('btnGbp');
+      var btnUsd = document.getElementById('btnUsd');
+      var p4Curr = document.getElementById('p4Curr');
+      var p4Amount = document.getElementById('p4Amount');
+      var p4Denom = document.getElementById('p4Denom');
+      var p4Subtext = document.getElementById('p4Subtext');
+      var btn4 = document.getElementById('btn4Lessons');
+
+      var p10Curr = document.getElementById('p10Curr');
+      var p10Amount = document.getElementById('p10Amount');
+      var p10Denom = document.getElementById('p10Denom');
+      var p10Subtext = document.getElementById('p10Subtext');
+      var btn10 = document.getElementById('btn10Lessons');
+
+      if (curr === 'usd') {
+        btnUsd.classList.add('active');
+        btnGbp.classList.remove('active');
+
+        p4Curr.textContent = '$';
+        p4Amount.textContent = '140';
+        p4Denom.textContent = 'USD';
+        p4Subtext.innerHTML = '<span>✓</span> Just $35 per 50-minute session';
+        btn4.href = 'https://wa.me/573502176541?text=' + encodeURIComponent("Hey Benito! I'd love to grab the 4-lesson Friends & Family package ($140 USD). Let's set it up!");
+
+        p10Curr.textContent = '$';
+        p10Amount.textContent = '295';
+        p10Denom.textContent = 'USD';
+        p10Subtext.innerHTML = '<span>✓</span> Best value — just $29.50 per 50-minute session';
+        btn10.href = 'https://wa.me/573502176541?text=' + encodeURIComponent("Hey Benito! I'd love to grab the 10-lesson Friends & Family package ($295 USD). Let's set it up!");
+      } else {
+        btnGbp.classList.add('active');
+        btnUsd.classList.remove('active');
+
+        p4Curr.textContent = '£';
+        p4Amount.textContent = '100';
+        p4Denom.textContent = 'GBP';
+        p4Subtext.innerHTML = '<span>✓</span> Just £25 per 50-minute session';
+        btn4.href = 'https://wa.me/573502176541?text=' + encodeURIComponent("Hey Benito! I'd love to grab the 4-lesson Friends & Family package (£100). Let's set it up!");
+
+        p10Curr.textContent = '£';
+        p10Amount.textContent = '220';
+        p10Denom.textContent = 'GBP';
+        p10Subtext.innerHTML = '<span>✓</span> Best value — just £22 per 50-minute session';
+        btn10.href = 'https://wa.me/573502176541?text=' + encodeURIComponent("Hey Benito! I'd love to grab the 10-lesson Friends & Family package (£220). Let's set it up!");
+      }
+    }
+  </script>
+</body>
+</html>
