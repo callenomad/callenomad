@@ -57,6 +57,7 @@ REQUIRED_GUIDE_PLACEHOLDERS = [
 ]
 
 GUIDE_TEMPLATE_FILE = BASE_DIR / "templates" / "survival_guide_template.html"
+HUB_TEMPLATE_FILE = BASE_DIR / "templates" / "survival_hub_template.html"
 
 
 def test_manifest():
@@ -178,6 +179,23 @@ def test_guide_template():
     print("PASS: Guide template successfully validated!")
 
 
+def test_hub_template():
+    print(f"Testing hub template existence at: {HUB_TEMPLATE_FILE}")
+    assert HUB_TEMPLATE_FILE.exists(), f"Hub template does not exist: {HUB_TEMPLATE_FILE}"
+
+    with open(HUB_TEMPLATE_FILE, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    assert "{{GUIDES_GRID}}" in html, "Hub template missing {{GUIDES_GRID}} placeholder"
+    assert "Street Spanish Survival Playbooks" in html or "Survival" in html, (
+        "Hub template missing core headline"
+    )
+    assert 'href="/"' in html or "href='/'" in html, "Hub template missing link to homepage"
+
+    print("PASS: Hub template successfully validated!")
+
+
 if __name__ == "__main__":
     test_manifest()
     test_guide_template()
+    test_hub_template()
