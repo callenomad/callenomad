@@ -232,8 +232,18 @@ def test_build_outputs():
     print("PASS: All build outputs, sitemap, and robots.txt successfully validated!")
 
 
+def test_index_navigation():
+    index_file = BASE_DIR / "index.html"
+    print(f"Testing index.html navigation links at: {index_file}")
+    with open(index_file, "r", encoding="utf-8") as f:
+        content = f.read()
+    assert '/survival/' in content, "index.html missing link to /survival/"
+    print("PASS: index.html navigation links verified!")
+
+
 if __name__ == "__main__":
     test_manifest()
     test_guide_template()
     test_hub_template()
     test_build_outputs()
+    test_index_navigation()
