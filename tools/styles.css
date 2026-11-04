@@ -77,21 +77,22 @@ select:focus-visible {
 /* Header */
 .site-header {
   border-bottom: 1px solid var(--border-light);
-  padding: 16px 0;
+  padding: 12px 0;
   background-color: var(--bg-body);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .brand-link {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: -0.01em;
+  color: var(--text-main);
 }
 
 .brand-link:hover {
@@ -99,35 +100,30 @@ select:focus-visible {
   color: var(--accent-orange);
 }
 
-.header-tag {
-  font-size: 13px;
-  color: var(--text-subtle);
-}
-
 /* Main intro */
 .page-intro {
-  padding: 24px 0 16px;
+  padding: 18px 0 10px;
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .page-lead {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 /* Tabs */
 .tabs-nav {
   display: flex;
   border-bottom: 1px solid var(--border-medium);
-  margin: 16px 0 24px;
+  margin: 14px 0 20px;
   gap: 8px;
 }
 
