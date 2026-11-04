@@ -38,6 +38,26 @@ REQUIRED_TOP_FIELDS = [
     "faqs",
 ]
 
+REQUIRED_GUIDE_PLACEHOLDERS = [
+    "{{H1}}",
+    "{{META_TITLE}}",
+    "{{META_DESCRIPTION}}",
+    "{{CANONICAL_URL}}",
+    "{{SCHEMA_JSON}}",
+    "{{BREADCRUMB_NAME}}",
+    "{{CITY_BADGE}}",
+    "{{READ_TIME}}",
+    "{{INTRO_HOOK}}",
+    "{{COMPARISON_TABLE}}",
+    "{{AUDIO_TASTERS}}",
+    "{{MINI_QUIZ}}",
+    "{{WHATSAPP_SCRIPTS}}",
+    "{{FAQS}}",
+    "{{RELATED_GUIDES}}",
+]
+
+GUIDE_TEMPLATE_FILE = BASE_DIR / "templates" / "survival_guide_template.html"
+
 
 def test_manifest():
     print(f"Testing manifest existence at: {DATA_FILE}")
@@ -121,5 +141,43 @@ def test_manifest():
     print(f"PASS: All 5 playbooks in {DATA_FILE} successfully validated!")
 
 
+def test_guide_template():
+    print(f"Testing guide template existence at: {GUIDE_TEMPLATE_FILE}")
+    assert GUIDE_TEMPLATE_FILE.exists(), f"Guide template does not exist: {GUIDE_TEMPLATE_FILE}"
+
+    with open(GUIDE_TEMPLATE_FILE, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # Placeholders check
+    for ph in REQUIRED_GUIDE_PLACEHOLDERS:
+        assert ph in html, f"Missing required placeholder in guide template: {ph}"
+
+    # Sticky bar check
+    assert "https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" in html, (
+        "Guide template missing Stripe checkout CTA link"
+    )
+    assert "https://cal.com/callenomad/20min" in html, (
+        "Guide template missing Cal.com audit CTA link"
+    )
+
+    # Audio player markup / logic check
+    assert "<audio" in html or "data-audio-src" in html or "audio" in html.lower(), (
+        "Guide template missing audio markup"
+    )
+
+    # Clipboard copy functionality check
+    assert "clipboard" in html or "copy" in html.lower(), (
+        "Guide template missing clipboard copy script"
+    )
+
+    # Mini quiz interactivity check
+    assert "mini-quiz" in html or "quiz" in html.lower(), (
+        "Guide template missing mini-quiz component"
+    )
+
+    print("PASS: Guide template successfully validated!")
+
+
 if __name__ == "__main__":
     test_manifest()
+    test_guide_template()

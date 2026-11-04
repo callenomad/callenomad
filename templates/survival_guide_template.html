@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{META_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:title" content="{{META_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:image" content="https://callenomad.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{META_TITLE}}">
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+  <meta name="twitter:image" content="https://callenomad.com/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  {{SCHEMA_JSON}}
+
+  <style>
+:root {
+  --bg-page: #FCFBFA;
+  --bg-surface: #F4F1EA;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #EDE8DF;
+  --bg-header: rgba(252, 251, 250, 0.94);
+  --border-light: #E7E2D8;
+  --border-medium: #D9D2C5;
+  --border-dark: #1E2229;
+
+  --text-main: #1E2229;
+  --text-secondary: #4A4F58;
+  --text-muted: #717885;
+
+  --brand-coral: #D94E36;
+  --brand-coral-hover: #C23F28;
+  --brand-coral-light: rgba(217, 78, 54, 0.08);
+  --brand-green: #1E6F5C;
+  --brand-green-subtle: rgba(30, 111, 92, 0.12);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 90px; /* Space for mobile sticky bottom bar */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header & Nav */
+.guide-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.85rem 1.5rem;
+}
+
+.guide-header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.logo-accent {
+  color: var(--brand-coral);
+}
+
+.header-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.header-nav-links a:hover {
+  color: var(--brand-coral);
+}
+
+.header-cta-btn {
+  background: var(--brand-coral);
+  color: #FFFFFF !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  transition: background 0.2s;
+}
+
+.header-cta-btn:hover {
+  background: var(--brand-coral-hover);
+}
+
+/* Breadcrumbs */
+.breadcrumbs-bar {
+  max-width: 900px;
+  margin: 1.25rem auto 0;
+  padding: 0 1.5rem;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.breadcrumbs-bar a {
+  color: var(--text-secondary);
+}
+
+.breadcrumbs-bar a:hover {
+  color: var(--brand-coral);
+  text-decoration: underline;
+}
+
+.breadcrumbs-separator {
+  color: var(--border-medium);
+}
+
+/* Article Container */
+.article-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+/* Hero Section */
+.article-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.article-h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.article-intro-hook {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border-left: 4px solid var(--brand-coral);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 2.5rem;
+}
+
+/* Section Headings */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 2.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-lead {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.5rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+.comparison-table th {
+  background: var(--bg-surface);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  border-bottom: 2px solid var(--border-medium);
+}
+
+.comparison-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-textbook {
+  color: #8C2A1E;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.table-calle {
+  color: var(--brand-green);
+  font-weight: 600;
+  font-size: 0.975rem;
+}
+
+.table-nuance {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* Audio Section */
+.audio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .audio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.audio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.audio-card-header {
+  margin-bottom: 0.75rem;
+}
+
+.audio-phrase {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.audio-translation {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.audio-breakdown {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.audio-player-wrapper {
+  margin-top: 1rem;
+}
+
+.audio-player-wrapper audio {
+  width: 100%;
+  height: 38px;
+  border-radius: var(--radius-full);
+}
+
+/* Vault Promotion Banner */
+.vault-promo-box {
+  background: linear-gradient(135deg, #1E2229 0%, #2A2F38 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin: 2.5rem 0;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .vault-promo-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.vault-promo-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.vault-promo-text p {
+  color: #D1D5DB;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.vault-promo-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-coral);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: transform 0.15s, background 0.2s;
+  box-shadow: 0 4px 12px rgba(217, 78, 54, 0.3);
+}
+
+.vault-promo-cta:hover {
+  background: var(--brand-coral-hover);
+  transform: translateY(-1px);
+}
+
+/* Mini-Quiz Widget */
+.quiz-widget-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-badge {
+  display: inline-block;
+  background: var(--brand-coral-light);
+  color: var(--brand-coral);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.quiz-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.quiz-question-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-question-title {
+  font-weight: 600;
+  font-size: 0.975rem;
+  margin-bottom: 1rem;
+  line-height: 1.45;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.quiz-option-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+  border-color: var(--brand-coral);
+  background: #FFFFFF;
+}
+
+.quiz-option-btn.selected-correct {
+  background: #E8F5E9;
+  border-color: #2E7D32;
+  color: #1B5E20;
+  font-weight: 600;
+}
+
+.quiz-option-btn.selected-incorrect {
+  background: #FFEBEE;
+  border-color: #C62828;
+  color: #B71C1C;
+}
+
+.quiz-feedback {
+  margin-top: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.825rem;
+  display: none;
+}
+
+.quiz-feedback.show-correct {
+  display: block;
+  background: #E8F5E9;
+  color: #1B5E20;
+  border-left: 3px solid #2E7D32;
+}
+
+.quiz-feedback.show-incorrect {
+  display: block;
+  background: #FFEBEE;
+  color: #B71C1C;
+  border-left: 3px solid #C62828;
+}
+
+.quiz-result-summary {
+  display: none;
+  background: var(--bg-card);
+  border: 2px solid var(--brand-coral);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.quiz-score-badge {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--brand-coral);
+  margin-bottom: 0.5rem;
+}
+
+/* WhatsApp Scripts */
+.whatsapp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.25rem;
+}
+
+.whatsapp-card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.whatsapp-speech-bubble {
+  background: #DCF8C6;
+  border-radius: 12px 12px 12px 2px;
+  padding: 1rem 1.25rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: #075E54;
+  margin-bottom: 0.85rem;
+  position: relative;
+  border: 1px solid #C5E1A5;
+}
+
+.whatsapp-english {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-main);
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: var(--bg-subtle);
+  border-color: var(--text-main);
+}
+
+.copy-btn.copied {
+  background: var(--brand-green);
+  color: #FFFFFF;
+  border-color: var(--brand-green);
+}
+
+/* FAQ Accordion */
+.faq-section {
+  margin: 3rem 0;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.15rem 1.25rem;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  color: var(--brand-coral);
+}
+
+.faq-toggle-icon {
+  font-size: 1.25rem;
+  transition: transform 0.2s;
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Related Guides */
+.related-guides-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .related-guides-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.related-guide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s, border-color 0.2s;
+  display: block;
+}
+
+.related-guide-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-coral);
+}
+
+.related-guide-city {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-coral);
+  margin-bottom: 0.35rem;
+}
+
+.related-guide-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+/* Footer */
+.guide-footer {
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  padding: 3rem 1.5rem 2rem;
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.guide-footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .guide-footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav a:hover {
+  color: var(--brand-coral);
+}
+
+/* Mobile Sticky Bottom Bar */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(30, 34, 41, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sticky-bar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.sticky-btn-primary {
+  background: var(--brand-coral);
+  color: #FFFFFF !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.7rem 0.5rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.sticky-btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.7rem 0.5rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+  .mobile-sticky-bar {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="guide-header">
+    <div class="guide-header-container">
+      <a href="/" class="logo-group">
+        <span>Calle<span class="logo-accent">Nomad</span></span>
+      </a>
+      <nav class="header-nav-links">
+        <a href="/survival/">Survival Guides</a>
+        <a href="/#phrasebook">Audio Vault ($19)</a>
+        <a href="https://cal.com/callenomad/20min" class="header-cta-btn">Free Fluency Audit</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs-bar" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator">/</span>
+    <a href="/survival/">Survival Guides</a>
+    <span class="breadcrumbs-separator">/</span>
+    <span>{{BREADCRUMB_NAME}}</span>
+  </nav>
+
+  <!-- Article Body -->
+  <main class="article-container">
+    <div class="article-meta-badge">{{CITY_BADGE}} • {{READ_TIME}}</div>
+    <h1 class="article-h1">{{H1}}</h1>
+    <div class="article-intro-hook">{{INTRO_HOOK}}</div>
+
+    <!-- Section 1: Comparison Table -->
+    <section>
+      <h2 class="section-title"><span>🗣️</span> Textbook vs. Street Spanish</h2>
+      <p class="section-lead">Here is what standard apps teach you versus what locals actually say and respect on the street:</p>
+      {{COMPARISON_TABLE}}
+    </section>
+
+    <!-- Section 2: Audio Tasters -->
+    <section>
+      <h2 class="section-title"><span>🎧</span> Native Audio Pronunciation & Nuance</h2>
+      <p class="section-lead">Listen to native Colombian speakers delivering these exact street phrases at conversational speed:</p>
+      {{AUDIO_TASTERS}}
+    </section>
+
+    <!-- Vault Mid-Article CTA Banner -->
+    <div class="vault-promo-box">
+      <div class="vault-promo-text">
+        <h3>Master All 30 Colombian Street Audio Clips</h3>
+        <p>Unlock the full Anti-Gringo Tax Audio & Script Vault. Includes native pronunciation, real-life WhatsApp scripts, and our landlord negotiation checklist.</p>
+      </div>
+      <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" class="vault-promo-cta">
+        Get Vault Access ($19)
+      </a>
+    </div>
+
+    <!-- Section 3: Interactive Mini-Quiz -->
+    <section>
+      <h2 class="section-title"><span>⚡</span> Test Your Street Smarts</h2>
+      <p class="section-lead">Can you handle these real-world Colombian scenarios? Take the 3-question challenge:</p>
+      {{MINI_QUIZ}}
+    </section>
+
+    <!-- Section 4: WhatsApp Scripts -->
+    <section>
+      <h2 class="section-title"><span>📱</span> Ready-to-Send WhatsApp Scripts</h2>
+      <p class="section-lead">Copy, paste, and customize these battle-tested messages directly in WhatsApp:</p>
+      {{WHATSAPP_SCRIPTS}}
+    </section>
+
+    <!-- Section 5: FAQs -->
+    <section class="faq-section">
+      <h2 class="section-title"><span>❓</span> Frequently Asked Questions</h2>
+      {{FAQS}}
+    </section>
+
+    <!-- Section 6: Related Guides -->
+    <section>
+      <h2 class="section-title"><span>📚</span> More Colombian Street Playbooks</h2>
+      {{RELATED_GUIDES}}
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="guide-footer">
+    <div class="guide-footer-inner">
+      <div class="footer-copy">
+        <p><strong>CalleNomad</strong> • Practical Colombian Spanish for Digital Nomads & Remote Workers.</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">© 2026 CalleNomad. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/survival/">All Playbooks</a>
+        <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203">Audio Vault ($19)</a>
+        <a href="https://cal.com/callenomad/20min">Book Audit</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Dual-CTA Bar -->
+  <aside class="mobile-sticky-bar" aria-label="Quick Actions">
+    <div class="sticky-bar-container">
+      <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" class="sticky-btn-primary">
+        <span>🎧</span> All 30 Clips ($19)
+      </a>
+      <a href="https://cal.com/callenomad/20min" class="sticky-btn-secondary">
+        <span>⚡</span> Free Audit
+      </a>
+    </div>
+  </aside>
+
+  <!-- Interactive JavaScript: Clipboard Copy & Mini-Quiz -->
+  <script>
+    // WhatsApp Script Clipboard Copy with Fallback
+    function copyScript(btn, scriptText) {
+      function showSuccess() {
+        var origText = btn.innerHTML;
+        btn.innerHTML = '<span>✓</span> Copied!';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.innerHTML = origText;
+          btn.classList.remove('copied');
+        }, 2200);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(scriptText).then(showSuccess).catch(function() {
+          fallbackCopy(scriptText, showSuccess);
+        });
+      } else {
+        fallbackCopy(scriptText, showSuccess);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      var textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        callback();
+      } catch (err) {
+        alert('Could not copy automatically. Please select the text manually.');
+      }
+      document.body.removeChild(textArea);
+    }
+
+    // Mini-Quiz Interactivity
+    var quizState = {
+      answered: 0,
+      total: 3,
+      correctCount: 0
+    };
+
+    function selectQuizOption(btn, isCorrect, qIndex) {
+      var questionBlock = btn.closest('.quiz-question-block');
+      var allButtons = questionBlock.querySelectorAll('.quiz-option-btn');
+      var feedback = questionBlock.querySelector('.quiz-feedback');
+
+      // Prevent multiple selections for same question
+      if (questionBlock.dataset.answered === 'true') return;
+      questionBlock.dataset.answered = 'true';
+
+      allButtons.forEach(function(b) {
+        b.disabled = true;
+      });
+
+      if (isCorrect) {
+        btn.classList.add('selected-correct');
+        feedback.className = 'quiz-feedback show-correct';
+        quizState.correctCount++;
+      } else {
+        btn.classList.add('selected-incorrect');
+        feedback.className = 'quiz-feedback show-incorrect';
+      }
+
+      quizState.answered++;
+
+      if (quizState.answered === quizState.total) {
+        var summary = document.getElementById('quizResultSummary');
+        if (summary) {
+          summary.style.display = 'block';
+          var scoreEl = document.getElementById('quizScoreText');
+          if (scoreEl) {
+            scoreEl.textContent = quizState.correctCount + ' / ' + quizState.total + ' Correct';
+          }
+          summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    }
+  </script>
+</body>
+</html>
