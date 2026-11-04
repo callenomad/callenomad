@@ -61,7 +61,7 @@ Book your free, zero-obligation **20-Minute Fluency Audit**:
 
 🔗 **Book:** [cal.com/callenomad/20min](https://cal.com/callenomad/20min)  
 🌐 **Website:** [callenomad.com](https://callenomad.com)  
-✉️ **Inquiries:** hola@callenomad.com  
+✉️ **Inquiries:** info@callenomad.com  
 
 ---
 *CalleNomad © 2026. Built by nomads, for nomads.*

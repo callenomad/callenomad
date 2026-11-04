@@ -324,7 +324,7 @@
     var cityName = selectCity.options[selectCity.selectedIndex] ? selectCity.options[selectCity.selectedIndex].text : '';
     var reportSubject = encodeURIComponent('Report wrong price: ' + category.name + ' in ' + cityName);
     disclaimer.innerHTML = (data.meta && data.meta.disclaimer ? data.meta.disclaimer : '') + lastUpdated +
-      ' <a href="mailto:hola@callenomad.com?subject=' + reportSubject + '" class="report-price-link" style="margin-left: 6px;">Report a wrong price.</a>';
+      ' <a href="mailto:info@callenomad.com?subject=' + reportSubject + '" class="report-price-link" style="margin-left: 6px;">Report a wrong price.</a>';
     box.appendChild(disclaimer);
 
     // In-result Quiet CTA
