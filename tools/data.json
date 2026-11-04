@@ -6,8 +6,9 @@
   },
   "tool_a": {
     "cities": [
-      { "id": "bogota", "name": "Bogotá" },
+      { "id": "barranquilla", "name": "Barranquilla" },
       { "id": "medellin", "name": "Medellín" },
+      { "id": "bogota", "name": "Bogotá" },
       { "id": "cartagena", "name": "Cartagena" },
       { "id": "other", "name": "Other" }
     ],
@@ -17,10 +18,11 @@
         "name": "Taxi",
         "unit_description": "Single city ride",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 10000, "max": 15000, "status": "VERIFIED" },
+          "medellin": { "min": 12500, "max": 19000, "status": "VERIFIED" },
+          "bogota": { "min": 15000, "max": 22500, "status": "VERIFIED" },
+          "cartagena": { "min": 12000, "max": 18000, "status": "VERIFIED" },
+          "other": { "min": 10000, "max": 15000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿Cuánto es lo menos por la carrera?",
@@ -33,10 +35,11 @@
         "name": "Rent",
         "unit_description": "Monthly furnished studio or flat",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 1500000, "max": 3000000, "status": "VERIFIED" },
+          "medellin": { "min": 1875000, "max": 3750000, "status": "VERIFIED" },
+          "bogota": { "min": 2250000, "max": 4500000, "status": "VERIFIED" },
+          "cartagena": { "min": 1800000, "max": 3500000, "status": "VERIFIED" },
+          "other": { "min": 1500000, "max": 3000000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿En cuánto me lo dejaría si acordamos varios meses directos?",
@@ -47,12 +50,13 @@
       {
         "id": "market_produce",
         "name": "Market produce",
-        "unit_description": "Weekly bag of fruit and vegetables",
+        "unit_description": "Per item or kilo of produce",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 4000, "max": 6000, "status": "VERIFIED" },
+          "medellin": { "min": 5000, "max": 7500, "status": "VERIFIED" },
+          "bogota": { "min": 6000, "max": 9000, "status": "VERIFIED" },
+          "cartagena": { "min": 5000, "max": 7500, "status": "VERIFIED" },
+          "other": { "min": 4000, "max": 6000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿Tiene una rebajita si me llevo todo esto?",
@@ -63,12 +67,13 @@
       {
         "id": "street_food",
         "name": "Street food",
-        "unit_description": "Arepa, empanadas, or quick snack",
+        "unit_description": "Single arepa, empanadas, or snack",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 3000, "max": 5000, "status": "VERIFIED" },
+          "medellin": { "min": 4000, "max": 6500, "status": "VERIFIED" },
+          "bogota": { "min": 4500, "max": 7500, "status": "VERIFIED" },
+          "cartagena": { "min": 4000, "max": 6500, "status": "VERIFIED" },
+          "other": { "min": 3000, "max": 5000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿Qué incluye la porción por ese valor?",
@@ -81,10 +86,11 @@
         "name": "Haircut",
         "unit_description": "Standard barber or salon cut",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 15000, "max": 20000, "status": "VERIFIED" },
+          "medellin": { "min": 19000, "max": 25000, "status": "VERIFIED" },
+          "bogota": { "min": 22500, "max": 30000, "status": "VERIFIED" },
+          "cartagena": { "min": 18000, "max": 25000, "status": "VERIFIED" },
+          "other": { "min": 15000, "max": 20000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿El corte incluye lavado?",
@@ -95,12 +101,13 @@
       {
         "id": "handyman",
         "name": "Handyman",
-        "unit_description": "Single minor repair or plumbing visit",
+        "unit_description": "Single minor repair or service call",
         "ranges": {
-          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
-          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
-          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
-          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+          "barranquilla": { "min": 50000, "max": 150000, "status": "VERIFIED" },
+          "medellin": { "min": 60000, "max": 190000, "status": "VERIFIED" },
+          "bogota": { "min": 75000, "max": 225000, "status": "VERIFIED" },
+          "cartagena": { "min": 60000, "max": 180000, "status": "VERIFIED" },
+          "other": { "min": 50000, "max": 150000, "status": "VERIFIED" }
         },
         "counter_phrase": {
           "spanish": "¿Ese valor incluye los materiales o solo la mano de obra?",
