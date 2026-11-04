@@ -256,6 +256,7 @@ def build_sitemap(playbooks):
         ("https://callenomad.com/", "1.0", "weekly"),
         ("https://callenomad.com/survival/", "0.9", "weekly"),
         ("https://callenomad.com/quiz/", "0.8", "monthly"),
+        ("https://callenomad.com/tools/", "0.8", "weekly"),
     ]
     for p in playbooks:
         urls.append((f"https://callenomad.com/survival/{p['slug']}/", "0.8", "monthly"))

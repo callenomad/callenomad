@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://callenomad.com/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -547,6 +547,9 @@
       margin-top: auto;
     }
   </style>
+  <!-- Cloudflare Web Analytics + source capture (CalleNomad) -->
+  <script>try{var q=new URLSearchParams(location.search),v=q.get('src')||q.get('utm_source');if(v){sessionStorage.setItem('cn_src',v.slice(0,40));}else if(!sessionStorage.getItem('cn_src')&&document.referrer&&document.referrer.indexOf(location.host)<0){sessionStorage.setItem('cn_src','ref:'+new URL(document.referrer).hostname);}}catch(e){}</script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "89dcce674b964164918bc4d4f2c774d1"}'></script>
 </head>
 <body>
 
@@ -848,7 +851,8 @@
           whatsapp: userWhatsapp,
           painPoint: selectedPainPoint,
           streetScore: score,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          source: (function(){ try { return sessionStorage.getItem('cn_src') || 'direct'; } catch (e) { return 'direct'; } })()
         };
 
         // Non-blocking Webhook dispatch (if configured)

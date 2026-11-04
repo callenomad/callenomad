@@ -80,7 +80,7 @@ This document contains high-converting email templates for two core funnels:
 > 
 > That’s exactly what we train in our **Free 20-Minute Fluency Audit**. We test your street reflexes in a friendly, zero-pressure 1-on-1 roleplay and pinpoint what's causing your hesitation.
 > 
-> 👉 **[Grab a 20-Minute Audit Slot on Calendly]({{Calendly_Link}})**
+> 👉 **[Grab a 20-Minute Audit Slot on Cal.com](https://cal.com/callenomad/20min)**
 > 
 > Talk soon,  
 > **[Your Name]**
@@ -116,7 +116,7 @@ This document contains high-converting email templates for two core funnels:
 > 
 > Ready to speak like a local in your target city?
 > 
-> 👉 **[Book your Free 20-Minute Fluency Audit here]({{Calendly_Link}})**
+> 👉 **[Book your Free 20-Minute Fluency Audit here](https://cal.com/callenomad/20min)**
 > 
 > Best,  
 > **[Your Name]**
@@ -146,7 +146,7 @@ This document contains high-converting email templates for two core funnels:
 > 
 > I have a few openings this week for our free 20-minute fluency audit:
 > 
-> 👉 **[Claim your Free Fluency Audit slot here]({{Calendly_Link}})**
+> 👉 **[Claim your Free Fluency Audit slot here](https://cal.com/callenomad/20min)**
 > 
 > Let’s get you out of the bubble.
 > 
