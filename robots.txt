@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /archive/
+Disallow: /go/
 
 Sitemap: https://callenomad.com/sitemap.xml

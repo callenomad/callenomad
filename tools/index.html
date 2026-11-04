@@ -18,6 +18,9 @@
   <meta name="twitter:image" content="https://callenomad.com/og-image.jpg">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- Cloudflare Web Analytics + source capture (CalleNomad) -->
   <script>try{var q=new URLSearchParams(location.search),v=q.get('src')||q.get('utm_source');if(v){sessionStorage.setItem('cn_src',v.slice(0,40));}else if(!sessionStorage.getItem('cn_src')&&document.referrer&&document.referrer.indexOf(location.host)<0){sessionStorage.setItem('cn_src','ref:'+new URL(document.referrer).hostname);}}catch(e){}</script>
@@ -27,7 +30,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="brand-link" data-track-src>CalleNomad</a>
+      <a href="/" class="brand-link" data-track-src aria-label="CalleNomad Home">
+        <svg viewBox="0 0 100 100" width="30" height="30" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M 69 33 A 29 29 0 1 0 69 71" fill="none" stroke="var(--text-main)" stroke-width="4.5" /><line x1="30" y1="70" x2="43.5" y2="56.5" stroke="var(--text-main)" stroke-width="3.5" /><circle cx="48" cy="52" r="5.5" fill="var(--bg-page)" stroke="var(--text-main)" stroke-width="2.5" /><circle cx="48" cy="52" r="2.2" fill="var(--brand-coral)" /><line x1="52.5" y1="47.5" x2="71" y2="29" stroke="var(--brand-coral)" stroke-width="3.5" /><polygon points="80,20 64,25.5 74.5,36" fill="var(--brand-coral)" stroke="none" /></svg>
+        <span>Calle<span class="accent-text">Nomad</span></span>
+      </a>
     </div>
   </header>
 

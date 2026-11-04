@@ -282,6 +282,8 @@ def build_sitemap(playbooks):
 def build_robots():
     content = """User-agent: *
 Allow: /
+Disallow: /archive/
+Disallow: /go/
 
 Sitemap: https://callenomad.com/sitemap.xml
 """
