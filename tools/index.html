@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombia Price Checker and Landlord WhatsApp Translator | CalleNomad</title>
+  <meta name="description" content="Check typical prices in Colombia and generate polite Spanish WhatsApp messages for your landlord. Free, no sign-up, no tracking.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://callenomad.com/tools/">
+  <meta property="og:title" content="Colombia Price Checker and Landlord WhatsApp Translator">
+  <meta property="og:description" content="Check whether a quoted price is fair in Colombia, or draft a polite Spanish message for your landlord. Free, no sign-up, no tracking.">
+  <meta property="og:image" content="https://callenomad.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Colombia Price Checker and Landlord WhatsApp Translator">
+  <meta name="twitter:description" content="Check whether a quoted price is fair in Colombia, or draft a polite Spanish message for your landlord. Free, no sign-up, no tracking.">
+  <meta name="twitter:image" content="https://callenomad.com/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-link" data-track-src>CalleNomad</a>
+      <span class="header-tag">Practical tools for Colombia</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1 class="page-title">Street Spanish tools</h1>
+      <p class="page-lead">Two practical tools for everyday expat situations in Colombia. Use the price checker to see whether a quote is reasonable, or generate a polite Spanish message for your landlord.</p>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav" role="tablist" aria-label="Tool selection">
+      <button type="button" class="tab-btn" id="tabPriceBtn" role="tab" aria-selected="true" aria-controls="tab-price" tabindex="0">
+        Price checker
+      </button>
+      <button type="button" class="tab-btn" id="tabTranslatorBtn" role="tab" aria-selected="false" aria-controls="tab-translator" tabindex="-1">
+        Landlord translator
+      </button>
+    </nav>
+
+    <!-- TOOL A: Price Checker -->
+    <section class="tab-panel active" id="tab-price" role="tabpanel" aria-labelledby="tabPriceBtn">
+      <form id="priceCheckerForm" novalidate>
+        <div class="form-group">
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect" class="select-control" required></select>
+        </div>
+
+        <div class="form-group">
+          <label for="citySelect">City</label>
+          <select id="citySelect" class="select-control" required></select>
+        </div>
+
+        <div class="form-group">
+          <label for="priceInput">Quoted price in COP</label>
+          <input type="text" id="priceInput" class="text-control" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 25000" required>
+          <div class="input-help">Enter the total figure quoted in Colombian Pesos without full stops or commas.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Check price</button>
+      </form>
+
+      <div id="toolAResult" style="display: none;"></div>
+    </section>
+
+    <!-- TOOL B: Landlord WhatsApp Translator -->
+    <section class="tab-panel" id="tab-translator" role="tabpanel" aria-labelledby="tabTranslatorBtn" aria-hidden="true">
+      <div class="form-group">
+        <label for="situationSelect">Situation</label>
+        <select id="situationSelect" class="select-control"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="messageSelect">Template</label>
+        <select id="messageSelect" class="select-control"></select>
+      </div>
+
+      <fieldset class="tone-fieldset">
+        <legend class="tone-legend">Tone</legend>
+        <div class="tone-options">
+          <div class="tone-option">
+            <input type="radio" id="tonePolite" name="messageTone" value="polite" checked>
+            <label for="tonePolite" class="tone-label">Polite</label>
+          </div>
+          <div class="tone-option">
+            <input type="radio" id="toneFirm" name="messageTone" value="firm">
+            <label for="toneFirm" class="tone-label">Firm but friendly</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div id="variablesContainer" class="variables-grid" style="display: none;"></div>
+
+      <div id="toolBResult" class="result-box" style="display: none;">
+        <div class="message-preview-card">
+          <div class="message-label">Spanish text to send</div>
+          <div id="messageSpanish" class="message-body-es"></div>
+          <div class="message-label">English meaning</div>
+          <div id="messageEnglish" class="message-body-en"></div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" id="btnCopyMessage" class="btn btn-secondary" style="flex: 1;">Copy Spanish message</button>
+          <a id="btnSendWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">Send via WhatsApp</a>
+        </div>
+        <div id="copyFeedbackB" class="copy-feedback"></div>
+
+        <div class="result-audit-cta">
+          Want to practise saying it out loud? <a href="https://cal.com/callenomad/20min" data-track-src target="_blank" rel="noopener noreferrer">Book a free 20-minute Fluency Audit.</a>
+        </div>
+
+        <div class="share-block">
+          <button type="button" id="btnShareToolB" class="btn btn-primary btn-full">Send this tool to a friend</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-section">
+        Prefer to learn the scripts with audio? The Anti-Gringo Tax Audio and Script Vault is $19 USD, credited in full if you upgrade. <a href="https://buy.stripe.com/9B628r7dUh1G8LndbAcV203" data-track-src target="_blank" rel="noopener noreferrer">Learn more about the Vault.</a>
+      </div>
+
+      <div class="footer-resources">
+        <div>
+          <a href="/quiz/" data-track-src>Free Street Survival Quiz</a>
+        </div>
+        <div>
+          <a href="/nomad-street-guide.pdf" data-track-src target="_blank" rel="noopener noreferrer">Nomad Street Guide (PDF)</a>
+        </div>
+        <div>
+          <a href="mailto:hola@callenomad.com?subject=Report%20a%20wrong%20price%20on%20CalleNomad%20tools">Report a wrong price</a>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        No sign-up, no tracking. Built by CalleNomad in Colombia.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

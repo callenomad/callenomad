@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "last_updated": "November 2026",
+    "disclaimer": "Typical ranges are based on community reports and our own experience. Treat them as a guide, not a rule.",
+    "missing_range_message": "We do not have a reliable range for this yet."
+  },
+  "tool_a": {
+    "cities": [
+      { "id": "bogota", "name": "Bogotá" },
+      { "id": "medellin", "name": "Medellín" },
+      { "id": "cartagena", "name": "Cartagena" },
+      { "id": "other", "name": "Other" }
+    ],
+    "categories": [
+      {
+        "id": "taxi",
+        "name": "Taxi",
+        "unit_description": "Single city ride",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿Cuánto es lo menos por la carrera?",
+          "phonetic": "KWAHN-toh ess loh MEH-nohs por lah kah-RREH-rah",
+          "english": "What is your best price for the ride?"
+        }
+      },
+      {
+        "id": "rent",
+        "name": "Rent",
+        "unit_description": "Monthly furnished studio or flat",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿En cuánto me lo dejaría si acordamos varios meses directos?",
+          "phonetic": "ehn KWAHN-toh meh loh deh-hah-REE-ah see ah-kor-DAH-mohs BAH-ryohs MEH-sehs dee-REHK-tohs",
+          "english": "What could you offer if we agree on several months directly?"
+        }
+      },
+      {
+        "id": "market_produce",
+        "name": "Market produce",
+        "unit_description": "Weekly bag of fruit and vegetables",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿Tiene una rebajita si me llevo todo esto?",
+          "phonetic": "TYEH-neh oo-nah reh-bah-HEE-tah see meh YEH-voh TOH-doh ESS-toh",
+          "english": "Could you do a small discount if I take all of this?"
+        }
+      },
+      {
+        "id": "street_food",
+        "name": "Street food",
+        "unit_description": "Arepa, empanadas, or quick snack",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿Qué incluye la porción por ese valor?",
+          "phonetic": "keh een-KLOO-yeh lah por-SYOHN por EH-seh vah-LOHR",
+          "english": "What comes with the portion for that price?"
+        }
+      },
+      {
+        "id": "haircut",
+        "name": "Haircut",
+        "unit_description": "Standard barber or salon cut",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿El corte incluye lavado?",
+          "phonetic": "ehl KOHR-teh een-KLOO-yeh lah-VAH-doh",
+          "english": "Does the haircut include a wash?"
+        }
+      },
+      {
+        "id": "handyman",
+        "name": "Handyman",
+        "unit_description": "Single minor repair or plumbing visit",
+        "ranges": {
+          "bogota": { "min": null, "max": null, "status": "TO VERIFY" },
+          "medellin": { "min": null, "max": null, "status": "TO VERIFY" },
+          "cartagena": { "min": null, "max": null, "status": "TO VERIFY" },
+          "other": { "min": null, "max": null, "status": "TO VERIFY" }
+        },
+        "counter_phrase": {
+          "spanish": "¿Ese valor incluye los materiales o solo la mano de obra?",
+          "phonetic": "EH-seh vah-LOHR een-KLOO-yeh lohs mah-teh-RYAH-lehs oh SOH-loh lah MAH-noh deh OH-brah",
+          "english": "Does that quote include materials or only the labour?"
+        }
+      }
+    ]
+  },
+  "tool_b": {
+    "situations": [
+      {
+        "id": "deposit",
+        "title": "Ask about the deposit",
+        "messages": [
+          {
+            "id": "dep_1",
+            "title": "Request return timeline after moving out",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Espero que se encuentre muy bien. Le escribo para consultar en qué fecha tiene previsto realizar la devolución del depósito correspondiente al apartamento [apartamento]. Muchas gracias por su colaboración.",
+                "english": "Good afternoon, [nombre]. I hope you are well. I am writing to check when you plan to return the security deposit for flat [apartamento]. Thank you for your assistance."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Como acordamos en la entrega del apartamento [apartamento] el día [fecha], el inmueble quedó en orden. Le agradezco confirmar la fecha exacta de la transferencia del depósito. Quedo atento a su respuesta.",
+                "english": "Good afternoon, [nombre]. As agreed during the inspection of flat [apartamento] on [fecha], everything was left in good order. Please confirm the exact transfer date for the deposit. I await your reply."
+              }
+            }
+          },
+          {
+            "id": "dep_2",
+            "title": "Ask for bank account confirmation for deposit refund",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. Para facilitar el reembolso del depósito del apartamento [apartamento], le comparto mis datos bancarios. Por favor me confirma si requiere algún dato adicional. Saludos cordiales.",
+                "english": "Hello, [nombre]. To facilitate the refund of the deposit for flat [apartamento], here are my account details. Please confirm if you need anything else. Kind regards."
+              },
+              "firm": {
+                "spanish": "Estimado Don [nombre]. Ya se cumplieron los días acordados tras la entrega del apartamento [apartamento]. Le reenvío mis datos de cuenta para que proceda con la transferencia del saldo correspondiente. Agradezco su confirmación hoy.",
+                "english": "Dear [nombre]. The agreed period following the handover of flat [apartamento] has now passed. I am re-sending my bank details so you can proceed with the transfer. I would appreciate your confirmation today."
+              }
+            }
+          },
+          {
+            "id": "dep_3",
+            "title": "Query deduction on deposit balance",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Revisé el valor reembolsado del depósito y noto una diferencia de [monto]. ¿Usted me podría compartir los comprobantes o facturas de dicho descuento para tener claridad? Muchas gracias.",
+                "english": "Good afternoon, [nombre]. I reviewed the returned deposit amount and noticed a deduction of [monto]. Could you please share the receipts or invoices for that deduction so I can review it? Thank you."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Veo un descuento de [monto] en el depósito del apartamento [apartamento] que no fue acordado en el inventario final. Le solicito las facturas correspondientes o el reembolso del valor faltante. Quedo atento.",
+                "english": "Good afternoon, [nombre]. I see a deduction of [monto] from the deposit for flat [apartamento] that was not agreed during the final walkthrough. Please send the invoices or refund the remaining balance. Awaiting your reply."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "repair",
+        "title": "Report a repair",
+        "messages": [
+          {
+            "id": "rep_1",
+            "title": "Report urgent water leak or plumbing fault",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Espero que esté muy bien. Le comento que se presentó una fuga de agua en [problema] del apartamento [apartamento]. ¿Cuándo podría enviar a alguien para revisarlo? Adjunto fotos para su conocimiento.",
+                "english": "Good afternoon, [nombre]. I hope you are well. A water leak has occurred in [problema] in flat [apartamento]. When could you send someone to inspect it? I attach photos for reference."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Se ha presentado un daño urgente en [problema] del apartamento [apartamento] que requiere atención inmediata para evitar humedades mayores. Por favor envíe un técnico hoy mismo. Quedo a la espera de su confirmación.",
+                "english": "Good afternoon, [nombre]. An urgent issue has arisen with [problema] in flat [apartamento] requiring immediate attention to prevent further damage. Please send a technician today. Awaiting your confirmation."
+              }
+            }
+          },
+          {
+            "id": "rep_2",
+            "title": "Report electrical or appliance failure",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. Quería informarle que [problema] dejó de funcionar en el apartamento [apartamento]. Ya verifiqué los tacos y la conexión. ¿Podría coordinar una revisión técnica cuando le sea posible? Muchas gracias.",
+                "english": "Hello, [nombre]. I wanted to let you know that [problema] has stopped working in flat [apartamento]. I have checked the circuit breakers and connections. Could you arrange a technician check when possible? Thank you."
+              },
+              "firm": {
+                "spanish": "Don [nombre], le informo que [problema] en el apartamento [apartamento] no está funcionando, lo cual afecta el uso normal del inmueble. Le solicito agendar la reparación dentro de las próximas 24 horas. Gracias por su pronta gestión.",
+                "english": "[nombre], I am informing you that [problema] in flat [apartamento] is not working, which affects normal use of the flat. Please schedule repair within the next 24 hours. Thank you for your prompt handling."
+              }
+            }
+          },
+          {
+            "id": "rep_3",
+            "title": "Follow up on a previously reported repair",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Le escribo para hacer seguimiento al arreglo de [problema] en el apartamento [apartamento] que le comenté el día [fecha]. ¿Tiene alguna novedad sobre la visita del técnico? Gracias.",
+                "english": "Good afternoon, [nombre]. Following up on the repair of [problema] in flat [apartamento] reported on [fecha]. Do you have any update on when the technician will visit? Thank you."
+              },
+              "firm": {
+                "spanish": "Don [nombre], ya han pasado varios días desde que reporté el problema con [problema] en el apartamento [apartamento] y aún no se ha solucionado. Le pido concretar fecha y hora exacta para la visita técnica hoy. Quedo a la espera.",
+                "english": "[nombre], several days have passed since I reported the issue with [problema] in flat [apartamento] and it remains unresolved. Please confirm the exact date and time for the technical visit today. Awaiting your reply."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "contract",
+        "title": "Ask about the contract",
+        "messages": [
+          {
+            "id": "con_1",
+            "title": "Request draft contract before signing",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Me gustaría revisar el borrador del contrato de arrendamiento para el apartamento [apartamento] con antelación. ¿Me lo podría enviar por correo o por este medio en PDF? Muy amable.",
+                "english": "Good afternoon, [nombre]. I would like to review the draft lease agreement for flat [apartamento] in advance. Could you please send it over email or here as a PDF? Much appreciated."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Antes de proceder con cualquier pago o firma, requiero revisar el borrador completo del contrato del apartamento [apartamento]. Le solicito compartirme el documento hoy para leerlo con detenimiento.",
+                "english": "Good afternoon, [nombre]. Before proceeding with any payment or signing, I require the complete draft contract for flat [apartamento]. Please share the document today so I can read it carefully."
+              }
+            }
+          },
+          {
+            "id": "con_2",
+            "title": "Clarify lease renewal terms",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. Dado que mi contrato del apartamento [apartamento] vence en [fecha], quisiera saber si existe la posibilidad de renovarlo por [duracion] y bajo qué condiciones. Quedo atento a sus comentarios.",
+                "english": "Hello, [nombre]. Since my lease for flat [apartamento] ends on [fecha], I would like to ask whether renewal for [duracion] is possible and under what terms. Looking forward to your thoughts."
+              },
+              "firm": {
+                "spanish": "Don [nombre], mi contrato finaliza el [fecha]. Necesito confirmar formalmente antes de [fecha] si renovaremos por [duracion] manteniendo el canon actual, para poder planificar mi estadía. Agradezco su confirmación por escrito.",
+                "english": "[nombre], my contract ends on [fecha]. I need formal confirmation before [fecha] whether we will renew for [duracion] at the current rate, so that I can plan my arrangements. I would appreciate confirmation in writing."
+              }
+            }
+          },
+          {
+            "id": "con_3",
+            "title": "Request copy of signed contract and inventory",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. ¿Sería tan amable de facilitarme una copia firmada del contrato de arrendamiento y del acta de inventario del apartamento [apartamento] para mis archivos personales? Muchas gracias.",
+                "english": "Good afternoon, [nombre]. Would you be so kind as to provide a signed copy of the lease and the handover inventory for flat [apartamento] for my personal records? Thank you very much."
+              },
+              "firm": {
+                "spanish": "Don [nombre], aún no he recibido la copia con ambas firmas del contrato y del inventario del apartamento [apartamento]. Le solicito enviármela escaneada hoy mismo para que ambas partes tengamos el soporte legal completo.",
+                "english": "[nombre], I have not yet received the countersigned copy of the lease and inventory for flat [apartamento]. Please send a scanned copy today so both parties have complete legal records."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "utilities",
+        "title": "Ask about utilities",
+        "messages": [
+          {
+            "id": "uti_1",
+            "title": "Request copies of utility bills",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Espero que se encuentre muy bien. ¿Usted me podría compartir las facturas recientes de los servicios públicos correspondientes al mes de [mes] del apartamento [apartamento]? Se lo agradezco mucho.",
+                "english": "Good afternoon, [nombre]. I hope you are well. Could you please share the recent utility bills for the month of [mes] for flat [apartamento]? Thank you very much."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Para proceder con el pago de los servicios del mes de [mes], necesito ver las facturas originales con los consumos detallados de [servicio]. Por favor adjúntelas para liquidar el valor exacto.",
+                "english": "Good afternoon, [nombre]. To proceed with paying utilities for [mes], I need to see the original bills showing detailed consumption for [servicio]. Please attach them so I can settle the exact amount."
+              }
+            }
+          },
+          {
+            "id": "uti_2",
+            "title": "Query unusually high utility bill",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. Revisando la factura de [servicio] del apartamento [apartamento] veo un valor bastante más alto de lo habitual. ¿Sabe usted si hubo algún cargo acumulado o reconexión previa a mi llegada? Gracias por aclararme.",
+                "english": "Hello, [nombre]. Reviewing the bill for [servicio] in flat [apartamento], I notice the amount is significantly higher than usual. Do you know if there was an accumulated balance or reconnection fee from before my arrival? Thank you for clarifying."
+              },
+              "firm": {
+                "spanish": "Don [nombre], la cuenta de [servicio] de este mes llegó por un valor desproporcionado respecto al consumo normal. No corresponde a mi uso regular del inmueble. Le pido revisar con la empresa prestadora antes de realizar cualquier cobro.",
+                "english": "[nombre], this month's bill for [servicio] arrived with an amount disproportionate to normal consumption. It does not reflect my regular usage. Please verify this with the provider before billing me."
+              }
+            }
+          },
+          {
+            "id": "uti_3",
+            "title": "Confirm whether utilities are included in rent payment",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Para confirmar lo acordado, ¿el canon mensual de [monto] ya incluye internet, agua, luz y gas, o alguno de estos servicios se factura por separado? Quedo atento a su aclaración.",
+                "english": "Good afternoon, [nombre]. To confirm what was agreed, does the monthly rent of [monto] already include internet, water, electricity, and gas, or is any service billed separately? Awaiting your clarification."
+              },
+              "firm": {
+                "spanish": "Don [nombre], le recuerdo que según lo pactado inicialmente, el valor mensual acordado cubre la totalidad de los servicios públicos. Le agradezco confirmar que no habrá cobros adicionales no contemplados en el acuerdo inicial.",
+                "english": "[nombre], I remind you that as originally agreed, the monthly amount covers all utilities in full. Please confirm there will be no additional charges beyond our initial agreement."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "rent_negotiation",
+        "title": "Negotiate rent",
+        "messages": [
+          {
+            "id": "neg_1",
+            "title": "Offer multi-month direct payment for lower monthly rate",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Me gustó mucho el apartamento [apartamento] y mi plan es quedarme [meses] meses. Si cerramos el trato directo y le pago por adelantado, ¿cuánto es lo menos en que me dejaría el canon mensual? Quedo muy atento.",
+                "english": "Good afternoon, [nombre]. I really liked flat [apartamento] and plan to stay for [meses] months. If we close directly and I pay in advance, what is your best monthly rate? I look forward to hearing from you."
+              },
+              "firm": {
+                "spanish": "Buenas tardes, Don [nombre]. Tengo interés real en el apartamento [apartamento] por [meses] meses. Mi presupuesto máximo es de [oferta] con servicios incluidos. Si le sirve ese valor, podemos cerrar el acuerdo de inmediato.",
+                "english": "Good afternoon, [nombre]. I have genuine interest in flat [apartamento] for [meses] months. My maximum budget is [oferta] with utilities included. If that works for you, we can conclude the agreement immediately."
+              }
+            }
+          },
+          {
+            "id": "neg_2",
+            "title": "Counter an unexpected rent increase upon renewal",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. He sido un arrendatario cumplido y cuidadoso con el apartamento [apartamento]. Entiendo el ajuste propuesto, pero se sale de mi presupuesto. ¿Sería posible mantener el canon en [oferta] para renovar por otros [meses] meses? Gracias.",
+                "english": "Hello, [nombre]. I have been a prompt and careful tenant in flat [apartamento]. I understand the proposed increase, but it exceeds my budget. Would it be possible to keep the rent at [oferta] to renew for another [meses] months? Thank you."
+              },
+              "firm": {
+                "spanish": "Don [nombre], el incremento propuesto supera el IPC autorizado por ley para contratos de vivienda en Colombia. Para continuar en el inmueble, le propongo un ajuste razonable a [oferta]. De lo contrario, procederé con la entrega en la fecha pactada.",
+                "english": "[nombre], the proposed increase exceeds the statutory CPI ceiling for residential leases in Colombia. To continue in the flat, I propose a reasonable adjustment to [oferta]. Otherwise, I will arrange handover on the agreed date."
+              }
+            }
+          },
+          {
+            "id": "neg_3",
+            "title": "Propose rent reduction in exchange for minor upkeep",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Estuve revisando el apartamento [apartamento] y requiere algunos arreglos menores de pintura y mantenimiento. Si yo me encargo de realizarlos, ¿podríamos acordar un canon mensual de [oferta]? Quedo atento a su concepto.",
+                "english": "Good afternoon, [nombre]. I looked over flat [apartamento] and it requires some minor painting and upkeep. If I handle these myself, could we agree on a monthly rent of [oferta]? Looking forward to your thoughts."
+              },
+              "firm": {
+                "spanish": "Don [nombre], el inmueble tiene desgastes evidentes que requieren inversión inmediata. Propongo asumir directamente esas reparaciones a cambio de fijar el alquiler en [oferta] durante los primeros [meses] meses. Confírmeme si le sirve esta alternativa.",
+                "english": "[nombre], the property has visible wear requiring immediate expenditure. I propose taking care of these repairs directly in exchange for fixing the rent at [oferta] for the first [meses] months. Please confirm if this works for you."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "notice",
+        "title": "Give notice",
+        "messages": [
+          {
+            "id": "not_1",
+            "title": "Give standard 30-day notice of departure",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Le escribo para comunicarle formalmente que dejaré el apartamento [apartamento] el día [fecha_salida], cumpliendo con el preaviso pactado. Coordinemos con tiempo el día y la hora para la entrega del inmueble y el inventario. Saludos.",
+                "english": "Good afternoon, [nombre]. I am writing to give formal notice that I will vacate flat [apartamento] on [fecha_salida], in accordance with our agreed notice period. Let us arrange a convenient time for the inspection and handover. Kind regards."
+              },
+              "firm": {
+                "spanish": "Don [nombre], por medio de este mensaje le notifico con la debida antelación que desocuparé el apartamento [apartamento] el [fecha_salida]. Le solicito agendar la inspección final para ese mismo día y coordinar la devolución del depósito correspondiente. Gracias.",
+                "english": "[nombre], through this message I give timely notice that I will vacate flat [apartamento] on [fecha_salida]. Please schedule the final inspection for that day and coordinate the return of the deposit. Thank you."
+              }
+            }
+          },
+          {
+            "id": "not_2",
+            "title": "Request early lease termination by mutual agreement",
+            "tones": {
+              "polite": {
+                "spanish": "Buenas tardes, Don [nombre]. Por motivos personales imprevistos, necesitaré salir del apartamento [apartamento] el próximo [fecha_salida]. Quisiera consultar si podemos llegar a un acuerdo cordial para una entrega anticipada sin penalidad. Quedo a su disposición para conversar.",
+                "english": "Good afternoon, [nombre]. Due to unforeseen personal reasons, I will need to leave flat [apartamento] on [fecha_salida]. I would like to ask if we might agree amicably on an early handover without penalty. I am available to discuss."
+              },
+              "firm": {
+                "spanish": "Don [nombre], debido a circunstancias de fuerza mayor debo desocupar el apartamento [apartamento] el [fecha_salida]. Me ofrezco a colaborar mostrando el lugar a nuevos interesados para facilitar una transición sin vacancia ni perjuicio para usted. Agradezco su pronta respuesta.",
+                "english": "[nombre], owing to circumstances beyond my control, I must vacate flat [apartamento] on [fecha_salida]. I am willing to show the flat to prospective tenants to ensure a seamless transition with no vacancy. I would appreciate your prompt response."
+              }
+            }
+          },
+          {
+            "id": "not_3",
+            "title": "Confirm handover schedule and key return",
+            "tones": {
+              "polite": {
+                "spanish": "Hola, Don [nombre]. Para la entrega del apartamento [apartamento] este [fecha_salida], ¿le queda bien si nos vemos a las 10:00 de la mañana en el edificio para revisar el inventario y entregarle las llaves? Muchas gracias por su tiempo.",
+                "english": "Hello, [nombre]. For the handover of flat [apartamento] on [fecha_salida], would 10:00 am at the building suit you to review the inventory and hand over the keys? Thank you very much for your time."
+              },
+              "firm": {
+                "spanish": "Don [nombre], le confirmo que el apartamento [apartamento] estará desocupado y limpio el [fecha_salida]. Requiero que nos reunamos a las 11:00 am para firmar el acta de entrega y finiquitar el saldo del depósito. Por favor confírmeme su asistencia.",
+                "english": "[nombre], I confirm that flat [apartamento] will be vacated and cleaned on [fecha_salida]. I require that we meet at 11:00 am to sign the handover document and settle the deposit balance. Please confirm your attendance."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
