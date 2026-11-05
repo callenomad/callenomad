@@ -8,7 +8,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://callenomad.com/quiz">
+  <link rel="canonical" href="https://callenomad.com/quiz/">
+  <meta property="og:url" content="https://callenomad.com/quiz/">
   <meta property="og:title" content="Street Spanish Readiness Diagnostic | CalleNomad">
   <meta property="og:description" content="Are you paying the Gringo Tax? Find out your street score in 60 seconds.">
   <meta property="og:image" content="https://callenomad.com/og-image.jpg">
@@ -217,7 +218,7 @@
     }
 
     /* Typography */
-    h2.step-title {
+    h1.step-title, h2.step-title {
       font-family: var(--font-heading);
       font-size: clamp(1.6rem, 3.8vw, 2.1rem);
       font-weight: 800;
@@ -550,6 +551,22 @@
   <!-- Cloudflare Web Analytics + source capture (CalleNomad) -->
   <script>try{var q=new URLSearchParams(location.search),v=q.get('src')||q.get('utm_source');if(v){sessionStorage.setItem('cn_src',v.slice(0,40));}else if(!sessionStorage.getItem('cn_src')&&document.referrer&&document.referrer.indexOf(location.host)<0){sessionStorage.setItem('cn_src','ref:'+new URL(document.referrer).hostname);}}catch(e){}</script>
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "89dcce674b964164918bc4d4f2c774d1"}'></script>
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://callenomad.com/quiz/",
+    "url": "https://callenomad.com/quiz/",
+    "name": "Street Spanish Readiness Diagnostic",
+    "description": "A free 60-second diagnostic that scores your real-world Spanish for Colombia and Latin America.",
+    "isPartOf": {
+      "@id": "https://callenomad.com/#website"
+    },
+    "publisher": {
+      "@id": "https://callenomad.com/#org"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -583,7 +600,7 @@
       <section id="stepIntro" class="step-view active">
         <div style="text-align: center;">
           <span class="badge badge-coral">60-Second Street Readiness Diagnostic</span>
-          <h2 class="step-title">Are You Paying the "Gringo Tax"? Test Your Street Spanish Score.</h2>
+          <h1 class="step-title">Are You Paying the "Gringo Tax"? Test Your Street Spanish Score.</h1>
           <p class="step-desc">
             Find out how well you actually survive real-world Colombian & LatAm street interactions—plus unlock our free <strong>30-Word Nomad Street Guide PDF</strong>.
           </p>
